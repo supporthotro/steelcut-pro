@@ -1,0 +1,30 @@
+{
+  "product": "catthep-toi-uu",
+  "commercialName": "SteelCut Pro — Cắt Thép Tối Ưu",
+  "publisher": "SteelCut Pro (support.hotro)",
+  "supportEmail": "support.hotro@gmail.com",
+  "version": "0.8.0",
+  "trialDays": 90,
+  "strictSinglePcPerKey": true,
+  "lemonSqueezyStoreIds": [525427],
+  "lemonSqueezyCheckoutUrl": "",
+  "gumroadProductUrl": "https://thienflare.gumroad.com/l/steelcut-pro",
+  "gumroadEnterpriseUrl": "https://thienflare.gumroad.com/l/steelcut-pro",
+  "gumroadProductId": "pfenb3gx2gVlJJumS9BBzA==",
+  "productIds": ["pfenb3gx2gVlJJumS9BBzA=="],
+  "gumroadOptions": {
+    "1": "fCw6Vdn9iIRljYSX9tkKPA==",
+    "2": "v1FVw2l9tL4jwc0HV5ebQw==",
+    "3": "RihpZ21awq03v-7einywoQ==",
+    "4": "QLLNpP-XJxEExg5MuL-BEg==",
+    "5": "vThpc7ysHAsYqPqy4YeU4g==",
+    "10": "tmbfgVvBkArlQVzK2gwoDw=="
+  },
+  "appsScriptBindUrl": "",
+  "pricingUsd": {
+    "1_pc": 700,
+    "2_pcs": 1000,
+    "3_pcs": 1200,
+    "4_plus_per_pc": 350
+  }
+}
