@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SteelCut Pro — Cắt Thép Tối Ưu | Official Storefront & 90-Day Free Trial</title>
-  <meta name="description" content="SteelCut Pro (Cắt Thép Tối Ưu) v0.8.0: Industrial 1D Structural Steel Cutting Optimization, Bevel Nesting, Shop Drawings & Remnant Inventory across 153 languages. 3-Month Free Trial · Perpetual License ($700 / $1,000 / $1,200 / $350 per PC for 4+ PCs). Instant 24/7 Automatic Key Delivery." />
+  <title>SteelCut Pro — Cắt Thép Tối Ưu | Official Storefront &amp; 90-Day Free Trial (153 Languages)</title>
+  <link rel="icon" type="image/png" href="app_logo_badge.png" />
+  <meta name="description" content="SteelCut Pro (Cắt Thép Tối Ưu) v0.8.0: Industrial 1D Structural Steel Cutting Optimization, Bevel Nesting, Shop Drawings &amp; Remnant Inventory across 153 languages. 3-Month Free Trial · Perpetual License ($700 / $1,000 / $1,200 / $350 per PC for 4+ PCs). Instant 24/7 Automatic Key Delivery." />
   <style>
     :root {
       --bg: #070d19;
@@ -15,42 +16,73 @@
       --amber: #f59e0b;
       --amber-hi: #fbbf24;
       --green: #10b981;
-      --pink: #ec4899;
       --text: #f8fafc;
       --muted: #94a3b8;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: "Segoe UI", Inter, -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif;
+      font-family: "Segoe UI", Inter, -apple-system, BlinkMacSystemFont, "Noto Sans JP", "Malgun Gothic", "Microsoft YaHei", sans-serif;
       background: radial-gradient(circle at 18% 0%, rgba(37, 99, 235, 0.22) 0%, var(--bg) 52%);
       color: var(--text);
       line-height: 1.65;
     }
     .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
     header {
-      position: sticky; top: 0; z-index: 60;
-      background: rgba(7, 13, 25, 0.92); backdrop-filter: blur(14px);
+      position: sticky; top: 0; z-index: 80;
+      background: rgba(7, 13, 25, 0.94); backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
-    .nav { display: flex; justify-content: space-between; align-items: center; min-height: 70px; gap: 14px; flex-wrap: wrap; padding: 10px 0; }
+    .nav { display: flex; justify-content: space-between; align-items: center; min-height: 70px; gap: 14px; flex-wrap: wrap; padding: 10px 0; position: relative; }
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 20px; color: #fff; text-decoration: none; }
-    .brand-icon {
-      width: 40px; height: 40px; border-radius: 10px;
-      background: linear-gradient(135deg, #0ea5e9, #1d4ed8);
-      border: 1px solid rgba(56,189,248,0.5);
-      display: inline-flex; align-items: center; justify-content: center;
-      font-weight: 900; font-size: 20px; color: #fff; position: relative;
+    .brand-logo {
+      width: 42px; height: 42px; border-radius: 10px;
+      object-fit: contain; background: #ffffff; padding: 2px;
+      box-shadow: 0 2px 10px rgba(56,189,248,0.28);
     }
-    .brand-icon::after {
-      content: ""; position: absolute; width: 22px; height: 3px;
-      background: var(--amber-hi); transform: rotate(-32deg); border-radius: 2px;
-    }
-    .lang-bar { display: flex; gap: 8px; }
+    .lang-bar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; position: relative; }
     .lang-btn {
       background: rgba(255,255,255,0.06); color: var(--muted); border: 1px solid var(--border);
-      padding: 6px 13px; border-radius: 999px; cursor: pointer; font-weight: 700; font-size: 13px;
+      padding: 7px 13px; border-radius: 999px; cursor: pointer; font-weight: 700; font-size: 13px;
+      transition: all 0.15s;
     }
+    .lang-btn:hover { border-color: var(--cyan); color: #fff; }
     .lang-btn.active { background: var(--blue); color: #fff; border-color: var(--cyan); }
+    .lang-dropdown {
+      display: none; position: absolute; top: calc(100% + 10px); right: 0;
+      width: min(760px, 94vw); max-height: 74vh;
+      background: #0b1528; border: 1px solid rgba(56, 189, 248, 0.45);
+      border-radius: 16px; box-shadow: 0 24px 60px rgba(0,0,0,0.75);
+      padding: 14px; z-index: 200; flex-direction: column; gap: 10px;
+    }
+    html[dir="rtl"] .lang-dropdown { right: auto; left: 0; }
+    .lang-dropdown.open { display: flex; }
+    .lang-search-row { display: flex; gap: 8px; align-items: center; }
+    .lang-search {
+      flex: 1; background: #050b16; border: 1px solid var(--border); color: #fff;
+      padding: 10px 14px; border-radius: 10px; font-size: 14px; outline: none;
+    }
+    .lang-search:focus { border-color: var(--cyan); }
+    .lang-count-badge {
+      font-size: 12px; font-weight: 800; color: var(--cyan);
+      background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56,189,248,0.3);
+      padding: 6px 10px; border-radius: 8px; white-space: nowrap;
+    }
+    .lang-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+      gap: 6px; overflow-y: auto; padding-right: 4px; max-height: 58vh;
+    }
+    .lang-item {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(148,163,184,0.14);
+      border-radius: 9px; padding: 7px 10px; cursor: pointer; text-align: left;
+      color: #e2e8f0; font-size: 13px; font-weight: 600; transition: background 0.12s, border-color 0.12s;
+    }
+    .lang-item:hover { background: rgba(37, 99, 235, 0.22); border-color: var(--cyan); color: #fff; }
+    .lang-item.selected { background: var(--blue); border-color: var(--cyan); color: #fff; }
+    .lang-code {
+      font-family: Consolas, monospace; font-size: 11px; color: #93c5fd;
+      background: rgba(15, 23, 42, 0.75); padding: 2px 6px; border-radius: 5px; flex-shrink: 0;
+    }
     .hero { text-align: center; padding: 54px 0 38px; }
     .pill {
       display: inline-block; padding: 6px 16px; border-radius: 999px;
@@ -140,13 +172,24 @@
   <header>
     <div class="container nav">
       <a class="brand" href="store.html">
-        <span class="brand-icon">H</span>
+        <img class="brand-logo" src="app_logo_badge.png" alt="SteelCut Pro Logo" />
         <span>SteelCut Pro — Cắt Thép Tối Ưu</span>
       </a>
-      <div class="lang-bar">
-        <button class="lang-btn active" onclick="setLang('vi')" id="btn-vi">🇻🇳 Tiếng Việt</button>
-        <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇺🇸 English</button>
-        <button class="lang-btn" onclick="setLang('ja')" id="btn-ja">🇯🇵 日本語</button>
+      <div class="lang-bar" id="langBarWrap">
+        <button class="lang-btn active" type="button" onclick="setLang('vi')" id="btn-vi">🇻🇳 Tiếng Việt</button>
+        <button class="lang-btn" type="button" onclick="setLang('en')" id="btn-en">🇺🇸 English</button>
+        <button class="lang-btn" type="button" onclick="setLang('ja')" id="btn-ja">🇯🇵 日本語</button>
+        <button class="lang-btn" type="button" onclick="toggleLangMenu(event)" id="btn-more-langs">
+          <span id="moreLangsLabel" data-i18n="all_langs_btn">🌐 153 Ngôn ngữ</span> ▾
+        </button>
+
+        <div class="lang-dropdown" id="langDropdown" onclick="event.stopPropagation()">
+          <div class="lang-search-row">
+            <input type="text" id="langSearchInput" class="lang-search" placeholder="🔍 Tìm nhanh trong 153 ngôn ngữ..." oninput="renderLangList()" />
+            <span class="lang-count-badge" id="langCountBadge">153 / 153</span>
+          </div>
+          <div class="lang-grid" id="langGrid"></div>
+        </div>
       </div>
     </div>
   </header>
@@ -154,7 +197,7 @@
   <main class="container">
     <section class="hero">
       <div class="pill" data-i18n="hero_pill">✨ DÙNG THỬ MIỄN PHÍ 3 THÁNG (90 NGÀY) · BẢN QUYỀN TRỌN GÓI VĨNH VIỄN</div>
-      <h1 data-i18n="hero_title">SteelCut Pro — Phần Mềm Tối Ưu Cắt Thép Kết Cấu & Quản Lý Phôi Dư</h1>
+      <h1 data-i18n="hero_title">SteelCut Pro — Phần Mềm Tối Ưu Cắt Thép Kết Cấu &amp; Quản Lý Phôi Dư</h1>
       <p class="lead" data-i18n="hero_lead">
         Giải pháp tối ưu cắt thép 1D chuẩn công nghiệp (Gilmore-Gomory Exact Column Generation), ghép khớp đầu vát xiên, quản lý tồn kho phôi dư theo vết PA#, xuất bản vẽ cắt xưởng PDF / Excel / AutoCAD DXF và tích hợp sẵn 153 ngôn ngữ offline.
       </p>
@@ -163,14 +206,14 @@
           ⬇ Tải Bộ Cài Windows 64-bit (Miễn Phí 3 Tháng)
         </a>
         <a class="btn btn-amber" href="#pricing" data-i18n="btn_buy_hero">
-          🛒 Xem Bảng Giá & Nhận Key Tự Động 24/7
+          🛒 Xem Bảng Giá &amp; Nhận Key Tự Động 24/7
         </a>
       </div>
       <div class="kpis">
-        <div class="kpi"><strong>90 Ngày</strong><span data-i18n="kpi_1">Miễn phí 3 tháng đầu đầy đủ tính năng</span></div>
-        <div class="kpi"><strong>100% Offline</strong><span data-i18n="kpi_2">Chạy độc lập tại xưởng, bảo mật tuyệt đối dữ liệu dự án</span></div>
-        <div class="kpi"><strong>153 Ngôn Ngữ</strong><span data-i18n="kpi_3">Giao diện & 153 sách PDF hướng dẫn đi kèm</span></div>
-        <div class="kpi"><strong>24/7 Auto-Key</strong><span data-i18n="kpi_4">Tự động gửi Key ngay khi nhận thanh toán</span></div>
+        <div class="kpi"><strong data-i18n="kpi_1_v">90 Ngày</strong><span data-i18n="kpi_1">Miễn phí 3 tháng đầu đầy đủ tính năng</span></div>
+        <div class="kpi"><strong data-i18n="kpi_2_v">100% Offline</strong><span data-i18n="kpi_2">Chạy độc lập tại xưởng, bảo mật tuyệt đối dữ liệu dự án</span></div>
+        <div class="kpi"><strong data-i18n="kpi_3_v">153 Ngôn Ngữ</strong><span data-i18n="kpi_3">Giao diện &amp; 153 sách PDF hướng dẫn đi kèm</span></div>
+        <div class="kpi"><strong data-i18n="kpi_4_v">24/7 Auto-Key</strong><span data-i18n="kpi_4">Tự động gửi Key ngay khi nhận thanh toán</span></div>
       </div>
     </section>
 
@@ -185,15 +228,14 @@
       </div>
 
       <div class="pricing-grid">
-        <!-- FREE 3 MONTHS -->
         <div class="card">
           <h3 data-i18n="t0_name">🆓 Dùng Thử 3 Tháng</h3>
           <div class="price">$0 <small>USD</small></div>
           <div class="per-pc" data-i18n="t0_sub">Miễn phí 90 ngày đầu tiên</div>
           <ul>
-            <li data-i18n="t0_f1">Mở khóa 100% tính năng tối ưu & bản vẽ</li>
-            <li data-i18n="t0_f2">Quản lý kho phôi dư & truy vết PA#</li>
-            <li data-i18n="t0_f3">Xuất PDF, Excel (.xlsx) & AutoCAD</li>
+            <li data-i18n="t0_f1">Mở khóa 100% tính năng tối ưu &amp; bản vẽ</li>
+            <li data-i18n="t0_f2">Quản lý kho phôi dư &amp; truy vết PA#</li>
+            <li data-i18n="t0_f3">Xuất PDF, Excel (.xlsx) &amp; AutoCAD DXF</li>
             <li data-i18n="t0_f4">Không xóa dữ liệu dự án khi hết hạn</li>
           </ul>
           <div class="btn-stack">
@@ -201,7 +243,6 @@
           </div>
         </div>
 
-        <!-- 1 PC: $700 -->
         <div class="card">
           <h3 data-i18n="t1_name">💎 Gói 1 Máy (Single PC)</h3>
           <div class="price">$700 <small>USD</small></div>
@@ -213,11 +254,10 @@
             <li data-i18n="t1_f4">Tự động giao Key qua Email 24/7</li>
           </ul>
           <div class="btn-stack">
-            <a class="btn btn-gumroad" id="gm-link-1" href="https://thienflare.gumroad.com/l/steelcut-pro?option=fCw6Vdn9iIRljYSX9tkKPA%3D%3D&wanted=true" target="_blank" rel="noopener" data-i18n="buy_1">💳 Mua Gói 1 Máy ($700 — Thẻ / PayPal)</a>
+            <a class="btn btn-gumroad" id="gm-link-1" href="https://thienflare.gumroad.com/l/steelcut-pro?option=fCw6Vdn9iIRljYSX9tkKPA%3D%3D&amp;wanted=true" target="_blank" rel="noopener" data-i18n="buy_1">💳 Mua Gói 1 Máy ($700 — Thẻ / PayPal)</a>
           </div>
         </div>
 
-        <!-- 2 PCs: $1,000 -->
         <div class="card highlight">
           <span class="badge" data-i18n="t2_badge">TIẾT KIỆM $400</span>
           <h3 data-i18n="t2_name">🚀 Gói 2 Máy (Team)</h3>
@@ -230,11 +270,10 @@
             <li data-i18n="t2_f4">Tự động gửi cả 2 Key vào Email 24/7</li>
           </ul>
           <div class="btn-stack">
-            <a class="btn btn-gumroad" id="gm-link-2" href="https://thienflare.gumroad.com/l/steelcut-pro?option=v1FVw2l9tL4jwc0HV5ebQw%3D%3D&wanted=true" target="_blank" rel="noopener" data-i18n="buy_2">💳 Mua Gói 2 Máy ($1,000 — Nhận 2 Key)</a>
+            <a class="btn btn-gumroad" id="gm-link-2" href="https://thienflare.gumroad.com/l/steelcut-pro?option=v1FVw2l9tL4jwc0HV5ebQw%3D%3D&amp;wanted=true" target="_blank" rel="noopener" data-i18n="buy_2">💳 Mua Gói 2 Máy ($1,000 — Nhận 2 Key)</a>
           </div>
         </div>
 
-        <!-- 3 PCs: $1,200 -->
         <div class="card highlight">
           <span class="badge" data-i18n="t3_badge">TIẾT KIỆM $900</span>
           <h3 data-i18n="t3_name">🏭 Gói 3 Máy (Workshop)</h3>
@@ -247,11 +286,10 @@
             <li data-i18n="t3_f4">Tự động gửi đủ 3 Key vào Email 24/7</li>
           </ul>
           <div class="btn-stack">
-            <a class="btn btn-gumroad" id="gm-link-3" href="https://thienflare.gumroad.com/l/steelcut-pro?option=RihpZ21awq03v-7einywoQ%3D%3D&wanted=true" target="_blank" rel="noopener" data-i18n="buy_3">💳 Mua Gói 3 Máy ($1,200 — Nhận 3 Key)</a>
+            <a class="btn btn-gumroad" id="gm-link-3" href="https://thienflare.gumroad.com/l/steelcut-pro?option=RihpZ21awq03v-7einywoQ%3D%3D&amp;wanted=true" target="_blank" rel="noopener" data-i18n="buy_3">💳 Mua Gói 3 Máy ($1,200 — Nhận 3 Key)</a>
           </div>
         </div>
 
-        <!-- 4+ PCs: $350 / PC -->
         <div class="card enterprise">
           <span class="badge" data-i18n="t4_badge">ƯU ĐÃI 50% — TỪ 4+ MÁY</span>
           <h3 data-i18n="t4_name">👑 Doanh Nghiệp (4+ Máy)</h3>
@@ -270,10 +308,10 @@
           <ul>
             <li data-i18n="t4_f1">Đồng giá ưu đãi $350 USD / máy (từ 4 máy)</li>
             <li data-i18n="t4_f2">Mỗi máy 1 Key riêng biệt trọn gói vĩnh viễn</li>
-            <li data-i18n="t4_f3">Tự động xuất & gửi đủ N Key qua Email 24/7</li>
+            <li data-i18n="t4_f3">Tự động xuất &amp; gửi đủ N Key qua Email 24/7</li>
           </ul>
           <div class="btn-stack">
-            <a class="btn btn-gumroad-vip" id="entCheckoutBtn" href="https://thienflare.gumroad.com/l/steelcut-pro?wanted=true&quantity=4" target="_blank" rel="noopener">
+            <a class="btn btn-gumroad-vip" id="entCheckoutBtn" href="https://thienflare.gumroad.com/l/steelcut-pro?option=QLLNpP-XJxEExg5MuL-BEg%3D%3D&amp;wanted=true" target="_blank" rel="noopener">
               👑 Mua 4 Máy ($1,400 — Tự gửi 4 Key)
             </a>
           </div>
@@ -282,18 +320,18 @@
     </section>
 
     <section class="sec">
-      <h2 class="sec-title" data-i18n="feat_title">Tại Sao Kỹ Sư & Nhà Máy Kết Cấu Thép Chọn SteelCut Pro?</h2>
+      <h2 class="sec-title" data-i18n="feat_title">Tại Sao Kỹ Sư &amp; Nhà Máy Kết Cấu Thép Chọn SteelCut Pro?</h2>
       <div class="features-grid">
         <div class="feat">
           <h4 data-i18n="f1_t">📐 Thuật Toán Tối Ưu Đa Phôi Chính Xác</h4>
           <p data-i18n="f1_d">Kết hợp Gilmore-Gomory Multi-Stock Column Generation + Quy hoạch động Pareto, triệt tiêu phế liệu cắt và ưu tiên giải phóng thép tồn kho thông minh.</p>
         </div>
         <div class="feat">
-          <h4 data-i18n="f2_t">⚡ Ghép Khớp Đầu Vát Xiên & 16 Tiết Diện</h4>
+          <h4 data-i18n="f2_t">⚡ Ghép Khớp Đầu Vát Xiên &amp; 16 Tiết Diện</h4>
           <p data-i18n="f2_d">Hỗ trợ đầy đủ H, I, SH, BH, C, L, CT, Hộp, Ống, Thép tấm, Thép thanh... Tự động lật ghép chung đường cắt chéo cho tiết diện đối xứng.</p>
         </div>
         <div class="feat">
-          <h4 data-i18n="f3_t">📋 Bản Vẽ Xưởng PDF, Excel & Kho Phôi Dư PA#</h4>
+          <h4 data-i18n="f3_t">📋 Bản Vẽ Xưởng PDF, Excel &amp; Kho Phôi Dư PA#</h4>
           <p data-i18n="f3_d">In sơ đồ cắt trực quan kèm chú thích 4 cạnh, bảng đặt mua vật tư, tự động nhập kho phôi dư đạt ngưỡng và hoàn tác an toàn có kiểm toán.</p>
         </div>
       </div>
@@ -350,115 +388,93 @@
     let currentLang = "vi";
     let gumroadBaseUrl = "https://thienflare.gumroad.com/l/steelcut-pro";
     let gumroadEntUrl = "https://thienflare.gumroad.com/l/steelcut-pro";
+    let LANGUAGES_META = [
+      { code: "vi", native: "Tiếng Việt", label: "Tiếng Việt", rtl: false },
+      { code: "en", native: "English", label: "English", rtl: false },
+      { code: "ja", native: "日本語", label: "日本語", rtl: false }
+    ];
+    const I18N = {"vi": {"search_ph": "🔍 Tìm nhanh trong 153 ngôn ngữ...", "all_langs_btn": "🌐 153 Ngôn ngữ", "hero_pill": "✨ DÙNG THỬ MIỄN PHÍ 3 THÁNG (90 NGÀY) · BẢN QUYỀN TRỌN GÓI VĨNH VIỄN", "hero_title": "SteelCut Pro — Phần Mềm Tối Ưu Cắt Thép Kết Cấu & Quản Lý Phôi Dư", "hero_lead": "Giải pháp tối ưu cắt thép 1D chuẩn công nghiệp (Gilmore-Gomory Exact Column Generation), ghép khớp đầu vát xiên, quản lý tồn kho phôi dư theo vết PA#, xuất bản vẽ cắt xưởng PDF / Excel / AutoCAD DXF và tích hợp sẵn 153 ngôn ngữ offline.", "btn_download": "⬇ Tải Bộ Cài Windows 64-bit (Miễn Phí 3 Tháng)", "btn_buy_hero": "🛒 Xem Bảng Giá & Nhận Key Tự Động 24/7", "kpi_1_v": "90 Ngày", "kpi_1": "Miễn phí 3 tháng đầu đầy đủ tính năng", "kpi_2_v": "100% Offline", "kpi_2": "Chạy độc lập tại xưởng, bảo mật tuyệt đối dữ liệu dự án", "kpi_3_v": "153 Ngôn Ngữ", "kpi_3": "Giao diện & 153 sách PDF hướng dẫn đi kèm", "kpi_4_v": "24/7 Auto-Key", "kpi_4": "Tự động gửi Key ngay khi nhận thanh toán", "price_title": "Bảng Giá Bản Quyền Trọn Gói Vĩnh Viễn (Mua 1 Lần)", "price_sub": "Thanh toán an toàn qua Thẻ Quốc Tế, Apple Pay, Google Pay hoặc PayPal (qua cổng bảo mật Gumroad). Hệ thống tự động gửi mã bản quyền vào Email của bạn ngay lập tức 24/7.", "policy_notice": "🔒 Quy tắc cấp phép nghiêm ngặt: 1 Key chỉ sử dụng cho 1 máy tính. Khi mua gói 2, 3 hoặc từ 4+ máy, hệ thống tự động cấp đủ số lượng Key độc lập tương ứng với từng máy!", "t0_name": "🆓 Dùng Thử 3 Tháng", "t0_sub": "Miễn phí 90 ngày đầu tiên", "t0_f1": "Mở khóa 100% tính năng tối ưu & bản vẽ", "t0_f2": "Quản lý kho phôi dư & truy vết PA#", "t0_f3": "Xuất PDF, Excel (.xlsx) & AutoCAD DXF", "t0_f4": "Không xóa dữ liệu dự án khi hết hạn", "t0_btn": "⬇ Tải Dùng Thử Ngay", "t1_name": "💎 Gói 1 Máy (Single PC)", "t1_sub": "$700 / máy · Tự động gửi 1 Key", "t1_f1": "1 Key bản quyền trọn gói cho 1 máy", "t1_f2": "Sử dụng vĩnh viễn 100% ngoại tuyến", "t1_f3": "Hỗ trợ gỡ mã chuyển máy khi đổi PC", "t1_f4": "Tự động giao Key qua Email 24/7", "buy_1": "💳 Mua Gói 1 Máy ($700 — Thẻ / PayPal)", "t2_badge": "TIẾT KIỆM $400", "t2_name": "🚀 Gói 2 Máy (Team)", "t2_sub": "Chỉ $500 / máy · Tự động gửi 2 Key", "t2_f1": "Cấp 2 Key riêng biệt cho 2 máy tính", "t2_f2": "Tiết kiệm ngay $400 USD so với mua lẻ", "t2_f3": "Bản quyền trọn gói vĩnh viễn tại xưởng", "t2_f4": "Tự động gửi cả 2 Key vào Email 24/7", "buy_2": "💳 Mua Gói 2 Máy ($1,000 — Nhận 2 Key)", "t3_badge": "TIẾT KIỆM $900", "t3_name": "🏭 Gói 3 Máy (Workshop)", "t3_sub": "Chỉ $400 / máy · Tự động gửi 3 Key", "t3_f1": "Cấp 3 Key riêng biệt cho 3 máy tính", "t3_f2": "Tiết kiệm ngay $900 USD cho phòng kỹ thuật", "t3_f3": "Trọn gói vĩnh viễn · Hỗ trợ kỹ thuật ưu tiên", "t3_f4": "Tự động gửi đủ 3 Key vào Email 24/7", "buy_3": "💳 Mua Gói 3 Máy ($1,200 — Nhận 3 Key)", "t4_badge": "ƯU ĐÃI 50% — TỪ 4+ MÁY", "t4_name": "👑 Doanh Nghiệp (4+ Máy)", "qty_label": "Số máy:", "t4_f1": "Đồng giá ưu đãi $350 USD / máy (từ 4 máy)", "t4_f2": "Mỗi máy 1 Key riêng biệt trọn gói vĩnh viễn", "t4_f3": "Tự động xuất & gửi đủ N Key qua Email 24/7", "ent_sub_tpl": "$350 / máy · Cấp {n} Key (Tiết kiệm ${saved})", "ent_btn_tpl": "👑 Mua {n} Máy (${total} — Tự gửi {n} Key)", "feat_title": "Tại Sao Kỹ Sư & Nhà Máy Kết Cấu Thép Chọn SteelCut Pro?", "f1_t": "📐 Thuật Toán Tối Ưu Đa Phôi Chính Xác", "f1_d": "Kết hợp Gilmore-Gomory Multi-Stock Column Generation + Quy hoạch động Pareto, triệt tiêu phế liệu cắt và ưu tiên giải phóng thép tồn kho thông minh.", "f2_t": "⚡ Ghép Khớp Đầu Vát Xiên & 16 Tiết Diện", "f2_d": "Hỗ trợ đầy đủ H, I, SH, BH, C, L, CT, Hộp, Ống, Thép tấm, Thép thanh... Tự động lật ghép chung đường cắt chéo cho tiết diện đối xứng.", "f3_t": "📋 Bản Vẽ Xưởng PDF, Excel & Kho Phôi Dư PA#", "f3_d": "In sơ đồ cắt trực quan kèm chú thích 4 cạnh, bảng đặt mua vật tư, tự động nhập kho phôi dư đạt ngưỡng và hoàn tác an toàn có kiểm toán."}, "en": {"search_ph": "🔍 Search 153 languages...", "all_langs_btn": "🌐 153 Languages", "hero_pill": "✨ 3-MONTH (90-DAY) FULL FREE TRIAL · PERPETUAL LIFETIME LICENSE", "hero_title": "SteelCut Pro — Industrial 1D Structural Steel Cutting & Remnant Optimizer", "hero_lead": "Exact multi-stock Gilmore-Gomory Column Generation, complementary bevel nesting, PA# traceable remnant inventory, shop cutting drawings (PDF / XLSX / DXF), and 153 built-in offline UI & manual languages.", "btn_download": "⬇ Download Windows 64-bit Installer (Free 3-Month Trial)", "btn_buy_hero": "🛒 View Volume Pricing & Instant 24/7 Checkout", "kpi_1_v": "90 Days", "kpi_1": "Full-feature 3-month free evaluation", "kpi_2_v": "100% Offline", "kpi_2": "Runs 100% offline in your shop — zero CAD data uploaded", "kpi_3_v": "153 Languages", "kpi_3": "153 UI languages & bundled offline PDF manuals", "kpi_4_v": "24/7 Auto-Key", "kpi_4": "Automatic license key delivery upon payment 24/7", "price_title": "Perpetual Commercial Volume Pricing (One-Time Purchase)", "price_sub": "Pay securely via Credit/Debit Card, Apple Pay, Google Pay, or PayPal (via Gumroad Secure Checkout). Official single-PC license keys are automatically dispatched to your email 24/7.", "policy_notice": "🔒 Strict Licensing Rule: 1 Key is valid for 1 PC only. Multi-PC orders (2, 3, or 4+ PCs) automatically deliver N individual single-PC keys!", "t0_name": "🆓 3-Month Free Trial", "t0_sub": "Free for the first 90 days", "t0_f1": "Unlocks 100% of optimization & drawing features", "t0_f2": "Remnant stock ledger & PA# traceability", "t0_f3": "PDF, Excel (.xlsx) & AutoCAD DXF exports", "t0_f4": "Project data is never deleted upon expiry", "t0_btn": "⬇ Download Free Trial", "t1_name": "💎 1 PC License", "t1_sub": "$700 / PC · Auto-sends 1 Key", "t1_f1": "1 perpetual license key for 1 Windows PC", "t1_f2": "Works 100% offline forever in your workshop", "t1_f3": "1-click license release when moving to a new PC", "t1_f4": "Instant 24/7 automatic email key delivery", "buy_1": "💳 Buy 1 PC ($700 — Card / PayPal)", "t2_badge": "SAVE $400", "t2_name": "🚀 2 PCs Team Pack", "t2_sub": "$500 / PC · Auto-sends 2 Keys", "t2_f1": "2 separate single-PC license keys", "t2_f2": "Save $400 USD vs single-seat price", "t2_f3": "Perpetual offline workshop license", "t2_f4": "Automatically emails both keys 24/7", "buy_2": "💳 Buy 2 PCs ($1,000 — Auto-send 2 Keys)", "t3_badge": "SAVE $900", "t3_name": "🏭 3 PCs Workshop Pack", "t3_sub": "$400 / PC · Auto-sends 3 Keys", "t3_f1": "3 separate single-PC license keys", "t3_f2": "Save $900 USD for engineering & shop teams", "t3_f3": "Perpetual license · Priority technical support", "t3_f4": "Automatically emails all 3 keys 24/7", "buy_3": "💳 Buy 3 PCs ($1,200 — Auto-send 3 Keys)", "t4_badge": "50% OFF — 4+ PCS VOLUME", "t4_name": "👑 Enterprise (4+ PCs)", "qty_label": "PCs:", "t4_f1": "Flat $350 USD / PC volume rate (from 4+ PCs)", "t4_f2": "1 dedicated perpetual key per PC", "t4_f3": "Automatically generates & emails all N keys 24/7", "ent_sub_tpl": "$350 / PC · {n} Individual Keys (Save ${saved})", "ent_btn_tpl": "👑 Buy {n} PCs (${total} — Auto-send {n} Keys)", "feat_title": "Why Structural Steel Engineers & Fabricators Choose SteelCut Pro", "f1_t": "📐 Exact Multi-Stock Cutting Optimization", "f1_d": "Combines Gilmore-Gomory Column Generation with Pareto dynamic programming to minimize scrap and prioritize warehouse stock consumption.", "f2_t": "⚡ Complementary Bevel Nesting & 16 Profiles", "f2_d": "Supports H, I, SH, BH, C, L, CT, RHS, Pipe, Flat Bar, Plate, Rebar... Automatically flips symmetrical sections to share diagonal bevel cuts.", "f3_t": "📋 PDF / XLSX / DXF Shop Drawings & PA# Remnants", "f3_d": "Prints visual bar cutting diagrams with 4-side comments, purchase schedules, automatic remnant registration, and audited 1-key reversal."}, "ja": {"search_ph": "🔍 153言語から検索...", "all_langs_btn": "🌐 153言語切替", "hero_pill": "✨ 初回3ヶ月（90日間）無料試用 · 永久買い切り商用ライセンス", "hero_title": "SteelCut Pro（鋼材取合最適化）— 鋼材切断計画・残材在庫管理ソフト", "hero_lead": "多母材対応 Gilmore-Gomory 列生成アルゴリズム、斜切り交互ネスティング、PA#追跡付き残材管理、工場切断図（PDF / Excel / DXF）、153言語オフライン説明書を標準搭載。", "btn_download": "⬇ Windows 64bit版ダウンロード（3ヶ月間無料試用）", "btn_buy_hero": "🛒 価格表・24時間自動キー発行ストアへ", "kpi_1_v": "90日間無料", "kpi_1": "初回3ヶ月（90日間）全機能を無料で試用可能", "kpi_2_v": "100% オフライン", "kpi_2": "工場内で完全オフライン稼働・図面データの外部送信ゼロ", "kpi_3_v": "153言語対応", "kpi_3": "153言語の画面切替とオフラインPDFマニュアル同梱", "kpi_4_v": "24時間自動発行", "kpi_4": "決済完了後24時間自動でライセンスキーをメール送信", "price_title": "永久買い切りライセンス価格表（月額費用なし）", "price_sub": "クレジットカード・Apple Pay・Google Pay・PayPal（Gumroad安全決済）に対応。決済完了後、自動でライセンスキーがメール送信されます。", "policy_notice": "🔒 ライセンス規定：1つのキーはPC 1台専用です。2台・3台・4台以上のご購入時は、台数分の個別キーが自動発行されます。", "t0_name": "🆓 3ヶ月無料試用版", "t0_sub": "初回90日間 $0 無料", "t0_f1": "最適化計算・切断図出力の全機能を100%利用可能", "t0_f2": "残材在庫台帳・PA#履歴照会に対応", "t0_f3": "PDF・Excel (.xlsx)・AutoCAD DXF 出力対応", "t0_f4": "試用期間終了後も保存済みデータは一切消えません", "t0_btn": "⬇ 無料試用版をダウンロード", "t1_name": "💎 1台ライセンス", "t1_sub": "$700 / 台 · 永久キー1個自動送信", "t1_f1": "PC 1台用の永久買い切りライセンスキー1個", "t1_f2": "認証後は工場内で永久に完全オフライン稼働", "t1_f3": "PC買い替え時のワンクリック認証解除・移行対応", "t1_f4": "決済後24時間メールにて即時自動発行", "buy_1": "💳 1台購入 ($700 — カード / PayPal)", "t2_badge": "$400 お得", "t2_name": "🚀 2台セット", "t2_sub": "$500 / 台 · 個別キー2個自動送信", "t2_f1": "PC 2台分の個別ライセンスキー2個を発行", "t2_f2": "単体購入より $400 USD 割引", "t2_f3": "追加費用なしの永久買い切り商用ライセンス", "t2_f4": "2個のキーを24時間自動でメール送信", "buy_2": "💳 2台購入 ($1,000 — 2キー自動送信)", "t3_badge": "$900 お得", "t3_name": "🏭 3台セット（工場向け）", "t3_sub": "$400 / 台 · 個別キー3個自動送信", "t3_f1": "PC 3台分の個別ライセンスキー3個を発行", "t3_f2": "設計・工場チーム向けに $900 USD 割引", "t3_f3": "永久ライセンス・優先サポート付き", "t3_f4": "3個のキーを24時間自動でメール送信", "buy_3": "💳 3台購入 ($1,200 — 3キー自動送信)", "t4_badge": "50% OFF — 4台以上法人割引", "t4_name": "👑 4台以上まとめ購入", "qty_label": "台数：", "t4_f1": "4台以上は一律 $350 USD / 台（50% OFF）", "t4_f2": "PC 1台ごとに独立した永久キーを発行", "t4_f3": "台数分のキーを24時間メールで自動一括送信", "ent_sub_tpl": "$350 / 台 · 個別キー {n} 個発行 (${saved} お得)", "ent_btn_tpl": "👑 {n}台購入 (${total} — {n}キー自動送信)", "feat_title": "鉄骨ファブリケーター・設計技術者に選ばれる理由", "f1_t": "📐 多母材対応の厳密取合最適化エンジン", "f1_d": "Gilmore-Gomory 列生成法とパレート動的計画法を融合し、端材ロスを最小化しながら在庫母材の優先消化を実現。", "f2_t": "⚡ 斜切り交互ネスティング・全16鋼種対応", "f2_d": "H・I・SH・BH・C・L・CT・角パイプ・鋼管・FB・PL・鉄筋など16断面に対応。対称断面の斜め切断を自動反転ペアリング。", "f3_t": "📋 PDF / Excel / DXF 切断図と PA# 残材管理", "f3_d": "4辺コメント付き切断図・発注集計表の出力、条件を満たす残材の自動入庫、履歴監査付き取消機能を搭載。"}};
 
-    const I18N = {
-      vi: {
-        hero_pill: "✨ DÙNG THỬ MIỄN PHÍ 3 THÁNG (90 NGÀY) · BẢN QUYỀN TRỌN GÓI VĨNH VIỄN",
-        hero_title: "SteelCut Pro — Phần Mềm Tối Ưu Cắt Thép Kết Cấu & Quản Lý Phôi Dư",
-        hero_lead: "Giải pháp tối ưu cắt thép 1D chuẩn công nghiệp (Gilmore-Gomory Exact Column Generation), ghép khớp đầu vát xiên, quản lý tồn kho phôi dư theo vết PA#, xuất bản vẽ cắt xưởng PDF / Excel / AutoCAD DXF và tích hợp sẵn 153 ngôn ngữ offline.",
-        btn_download: "⬇ Tải Bộ Cài Windows 64-bit (Miễn Phí 3 Tháng)",
-        btn_buy_hero: "🛒 Xem Bảng Giá & Nhận Key Tự Động 24/7",
-        kpi_1: "Miễn phí 3 tháng đầu đầy đủ tính năng",
-        kpi_2: "Chạy độc lập tại xưởng, bảo mật tuyệt đối dữ liệu dự án",
-        kpi_3: "Giao diện & 153 sách PDF hướng dẫn đi kèm",
-        kpi_4: "Tự động gửi Key ngay khi nhận thanh toán",
-        price_title: "Bảng Giá Bản Quyền Trọn Gói Vĩnh Viễn (Mua 1 Lần)",
-        price_sub: "Thanh toán an toàn qua Thẻ Quốc Tế, Apple Pay, Google Pay hoặc PayPal (qua cổng bảo mật Gumroad). Hệ thống tự động gửi mã bản quyền vào Email của bạn ngay lập tức 24/7.",
-        policy_notice: "🔒 Quy tắc cấp phép nghiêm ngặt: 1 Key chỉ sử dụng cho 1 máy tính. Khi mua gói 2, 3 hoặc từ 4+ máy, hệ thống tự động cấp đủ số lượng Key độc lập tương ứng với từng máy!",
-        t0_name: "🆓 Dùng Thử 3 Tháng",
-        t0_sub: "Miễn phí 90 ngày đầu tiên",
-        t0_btn: "⬇ Tải Dùng Thử Ngay",
-        t1_name: "💎 Gói 1 Máy (Single PC)",
-        t1_sub: "$700 / máy · Tự động gửi 1 Key",
-        t2_badge: "TIẾT KIỆM $400",
-        t2_name: "🚀 Gói 2 Máy (Team)",
-        t2_sub: "Chỉ $500 / máy · Tự động gửi 2 Key",
-        t3_badge: "TIẾT KIỆM $900",
-        t3_name: "🏭 Gói 3 Máy (Workshop)",
-        t3_sub: "Chỉ $400 / máy · Tự động gửi 3 Key",
-        t4_badge: "ƯU ĐÃI 50% — TỪ 4+ MÁY",
-        t4_name: "👑 Doanh Nghiệp (4+ Máy)",
-        qty_label: "Số máy:",
-        buy_1: "💳 Mua Gói 1 Máy ($700 — Thẻ / PayPal)",
-        buy_2: "💳 Mua Gói 2 Máy ($1,000 — Nhận 2 Key)",
-        buy_3: "💳 Mua Gói 3 Máy ($1,200 — Nhận 3 Key)"
-      },
-      en: {
-        hero_pill: "✨ 3-MONTH (90-DAY) FULL FREE TRIAL · PERPETUAL LIFETIME LICENSE",
-        hero_title: "SteelCut Pro — Industrial 1D Structural Steel Cutting & Remnant Optimizer",
-        hero_lead: "Exact multi-stock Gilmore-Gomory Column Generation, complementary bevel nesting, PA# traceable remnant inventory, shop cutting drawings (PDF / XLSX / DXF), and 153 built-in offline UI & manual languages.",
-        btn_download: "⬇ Download Windows 64-bit Installer (Free 3-Month Trial)",
-        btn_buy_hero: "🛒 View Volume Pricing & Instant 24/7 Checkout",
-        kpi_1: "Full-feature 3-month free evaluation",
-        kpi_2: "Runs 100% offline in your shop — zero CAD data uploaded",
-        kpi_3: "153 UI languages & bundled offline PDF manuals",
-        kpi_4: "Automatic license key delivery upon payment 24/7",
-        price_title: "Perpetual Commercial Volume Pricing (One-Time Purchase)",
-        price_sub: "Pay securely via Credit/Debit Card, Apple Pay, Google Pay, or PayPal (via Gumroad Secure Checkout). Official single-PC license keys are automatically dispatched to your email 24/7.",
-        policy_notice: "🔒 Strict Licensing Rule: 1 Key is valid for 1 PC only. Multi-PC orders (2, 3, or 4+ PCs) automatically deliver N individual single-PC keys!",
-        t0_name: "🆓 3-Month Free Trial",
-        t0_sub: "Free for the first 90 days",
-        t0_btn: "⬇ Download Free Trial",
-        t1_name: "💎 1 PC License",
-        t1_sub: "$700 / PC · Auto-sends 1 Key",
-        t2_badge: "SAVE $400",
-        t2_name: "🚀 2 PCs Team Pack",
-        t2_sub: "$500 / PC · Auto-sends 2 Keys",
-        t3_badge: "SAVE $900",
-        t3_name: "🏭 3 PCs Workshop Pack",
-        t3_sub: "$400 / PC · Auto-sends 3 Keys",
-        t4_badge: "50% OFF — 4+ PCS VOLUME",
-        t4_name: "👑 Enterprise (4+ PCs)",
-        qty_label: "PCs:",
-        buy_1: "💳 Buy 1 PC ($700 — Card / PayPal)",
-        buy_2: "💳 Buy 2 PCs ($1,000 — Auto-send 2 Keys)",
-        buy_3: "💳 Buy 3 PCs ($1,200 — Auto-send 3 Keys)"
-      },
-      ja: {
-        hero_pill: "✨ 初回3ヶ月（90日間）無料試用 · 永久買い切り商用ライセンス",
-        hero_title: "SteelCut Pro（鋼材取合最適化）— 鋼材切断計画・残材在庫管理ソフト",
-        hero_lead: "多母材対応 Gilmore-Gomory 列生成アルゴリズム、斜切り交互ネスティング、PA#追跡付き残材管理、工場切断図（PDF / Excel / DXF）、153言語オフライン説明書を標準搭載。",
-        btn_download: "⬇ Windows 64bit版ダウンロード（3ヶ月間無料試用）",
-        btn_buy_hero: "🛒 価格表・24時間自動キー発行ストアへ",
-        kpi_1: "初回3ヶ月（90日間）全機能を無料で試用可能",
-        kpi_2: "工場内で完全オフライン稼働・図面データの外部送信ゼロ",
-        kpi_3: "153言語の画面切替とオフラインPDFマニュアル同梱",
-        kpi_4: "決済完了後24時間自動でライセンスキーをメール送信",
-        price_title: "永久買い切りライセンス価格表（月額費用なし）",
-        price_sub: "クレジットカード・Apple Pay・Google Pay・PayPal（Gumroad安全決済）に対応。決済完了後、自動でライセンスキーがメール送信されます。",
-        policy_notice: "🔒 ライセンス規定：1つのキーはPC 1台専用です。2台・3台・4台以上のご購入時は、台数分の個別キーが自動発行されます。",
-        t0_name: "🆓 3ヶ月無料試用版",
-        t0_sub: "初回90日間 $0 無料",
-        t0_btn: "⬇ 無料試用版をダウンロード",
-        t1_name: "💎 1台ライセンス",
-        t1_sub: "$700 / 台 · 永久キー1個自動送信",
-        t2_badge: "$400 お得",
-        t2_name: "🚀 2台セット",
-        t2_sub: "$500 / 台 · 個別キー2個自動送信",
-        t3_badge: "$900 お得",
-        t3_name: "🏭 3台セット（工場向け）",
-        t3_sub: "$400 / 台 · 個別キー3個自動送信",
-        t4_badge: "50% OFF — 4台以上法人割引",
-        t4_name: "👑 4台以上まとめ購入",
-        qty_label: "台数：",
-        buy_1: "💳 1台購入 ($700 — カード / PayPal)",
-        buy_2: "💳 2台購入 ($1,000 — 2キー自動送信)",
-        buy_3: "💳 3台購入 ($1,200 — 3キー自動送信)"
+    function toggleLangMenu(ev) {
+      if (ev) ev.stopPropagation();
+      const dd = document.getElementById("langDropdown");
+      const opening = !dd.classList.contains("open");
+      dd.classList.toggle("open", opening);
+      if (opening) {
+        renderLangList();
+        const inp = document.getElementById("langSearchInput");
+        if (inp) setTimeout(() => inp.focus(), 20);
       }
-    };
+    }
+
+    document.addEventListener("click", () => {
+      const dd = document.getElementById("langDropdown");
+      if (dd) dd.classList.remove("open");
+    });
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape") {
+        const dd = document.getElementById("langDropdown");
+        if (dd) dd.classList.remove("open");
+      }
+    });
+
+    function renderLangList() {
+      const grid = document.getElementById("langGrid");
+      const q = (document.getElementById("langSearchInput").value || "").trim().toLowerCase();
+      const filtered = LANGUAGES_META.filter((item) =>
+        !q ||
+        item.code.toLowerCase().includes(q) ||
+        item.native.toLowerCase().includes(q) ||
+        item.label.toLowerCase().includes(q)
+      );
+      document.getElementById("langCountBadge").textContent = filtered.length + " / " + LANGUAGES_META.length;
+      grid.innerHTML = "";
+      filtered.forEach((item) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "lang-item" + (item.code === currentLang ? " selected" : "");
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = item.native;
+        const codeSpan = document.createElement("span");
+        codeSpan.className = "lang-code";
+        codeSpan.textContent = item.code;
+        btn.appendChild(nameSpan);
+        btn.appendChild(codeSpan);
+        btn.onclick = () => {
+          setLang(item.code);
+          document.getElementById("langDropdown").classList.remove("open");
+        };
+        grid.appendChild(btn);
+      });
+    }
 
     function setLang(lang) {
       currentLang = I18N[lang] ? lang : "vi";
+      const meta = LANGUAGES_META.find((m) => m.code === currentLang) || LANGUAGES_META[0];
       document.documentElement.lang = currentLang;
+      document.documentElement.dir = meta.rtl ? "rtl" : "ltr";
+
       ["vi", "en", "ja"].forEach((c) => {
         const b = document.getElementById("btn-" + c);
         if (b) b.classList.toggle("active", c === currentLang);
       });
-      const dict = I18N[currentLang];
+      const moreBtn = document.getElementById("btn-more-langs");
+      const moreLbl = document.getElementById("moreLangsLabel");
+      const isExtra = !["vi", "en", "ja"].includes(currentLang);
+      if (moreBtn) moreBtn.classList.toggle("active", isExtra);
+
+      const dict = I18N[currentLang] || I18N.en;
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const k = el.getAttribute("data-i18n");
         if (dict[k]) el.textContent = dict[k];
       });
+      if (isExtra && moreLbl) {
+        moreLbl.textContent = "🌐 " + meta.native + " (" + meta.code + ") · 153";
+      }
+      const searchInp = document.getElementById("langSearchInput");
+      if (searchInp && dict.search_ph) searchInp.placeholder = dict.search_ph;
+
+      try { localStorage.setItem("steelcut_store_lang", currentLang); } catch (e) {}
       updateEntCalc();
     }
 
@@ -490,20 +506,37 @@
         btnEl.href = gumroadBaseUrl + "?option=" + encodeURIComponent(optMap[n]) + "&wanted=true";
       } else {
         const sep = gumroadEntUrl.includes("?") ? "&" : "?";
-        btnEl.href = gumroadEntUrl + sep + "option=" + encodeURIComponent(optMap[4]) + "&wanted=true";
+        btnEl.href = gumroadEntUrl + sep + "option=" + encodeURIComponent(optMap[4]) + "&wanted=true&quantity=" + Math.max(1, Math.floor(n / 4));
       }
 
-      if (currentLang === "en") {
-        subEl.textContent = "$350 / PC · " + n + " Individual Keys (Save $" + saved.toLocaleString("en-US") + ")";
-        btnEl.textContent = "👑 Buy " + n + " PCs ($" + total.toLocaleString("en-US") + " — Auto-send " + n + " Keys)";
-      } else if (currentLang === "ja") {
-        subEl.textContent = "$350 / 台 · 個別キー " + n + " 個発行 ($" + saved.toLocaleString("en-US") + " お得)";
-        btnEl.textContent = "👑 " + n + "台購入 ($" + total.toLocaleString("en-US") + " — " + n + "キー自動送信)";
-      } else {
-        subEl.textContent = "$350 / máy · Cấp " + n + " Key (Tiết kiệm $" + saved.toLocaleString("en-US") + ")";
-        btnEl.textContent = "👑 Mua " + n + " Máy ($" + total.toLocaleString("en-US") + " — Tự gửi " + n + " Key)";
-      }
+      const dict = I18N[currentLang] || I18N.vi;
+      const fmt = (tpl) =>
+        String(tpl || "")
+          .replace(/\{n\}/g, String(n))
+          .replace(/\{total\}/g, total.toLocaleString("en-US"))
+          .replace(/\{saved\}/g, saved.toLocaleString("en-US"));
+
+      subEl.textContent = fmt(dict.ent_sub_tpl || I18N.vi.ent_sub_tpl);
+      btnEl.textContent = fmt(dict.ent_btn_tpl || I18N.vi.ent_btn_tpl);
     }
+
+    // Load full 153-language pack & initialize language
+    fetch("./store-i18n-153.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((bundle) => {
+        if (bundle && Array.isArray(bundle.languages) && bundle.strings) {
+          LANGUAGES_META = bundle.languages;
+          Object.keys(bundle.strings).forEach((code) => {
+            I18N[code] = bundle.strings[code];
+          });
+        }
+        const urlLang = new URLSearchParams(window.location.search).get("lang");
+        let savedLang = null;
+        try { savedLang = localStorage.getItem("steelcut_store_lang"); } catch (e) {}
+        const target = (urlLang && I18N[urlLang]) ? urlLang : ((savedLang && I18N[savedLang]) ? savedLang : currentLang);
+        setLang(target);
+      })
+      .catch(() => { setLang(currentLang); });
 
     fetch("./gumroad-config.json")
       .then((r) => (r.ok ? r.json() : null))
