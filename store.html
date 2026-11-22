@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SteelCut Pro — Cắt Thép Tối Ưu | Official Storefront &amp; 90-Day Free Trial (153 Languages)</title>
+  <title>SteelCut Pro — Cắt Thép Tối Ưu | Cửa Hàng Chính Thức &amp; Dùng Thử Miễn Phí 90 Ngày</title>
   <link rel="icon" type="image/png" href="app_logo_badge.png" />
-  <meta name="description" content="SteelCut Pro (Cắt Thép Tối Ưu) v0.8.0: Industrial 1D Structural Steel Cutting Optimization, Bevel Nesting, Shop Drawings &amp; Remnant Inventory across 153 languages. 3-Month Free Trial · Perpetual License ($700 / $1,000 / $1,200 / $350 per PC for 4+ PCs). Instant 24/7 Automatic Key Delivery." />
+  <meta name="description" content="SteelCut Pro v0.8.0: Industrial 1D Structural Steel Cutting Optimization, Bevel Nesting, Shop Drawings &amp; Remnant Inventory across 153 languages." />
   <style>
     :root {
       --bg: #070d19;
@@ -126,6 +126,7 @@
       position: absolute; top: -12px; right: 16px; font-size: 11px; font-weight: 900;
       padding: 4px 11px; border-radius: 999px; background: var(--cyan); color: #061224;
     }
+    html[dir="rtl"] .badge { right: auto; left: 16px; }
     .card.enterprise .badge { background: linear-gradient(135deg, #fbbf24, #ea580c); color: #0b1120; }
     .card h3 { font-size: 19px; margin-bottom: 4px; color: #fff; }
     .price { font-size: 34px; font-weight: 900; margin: 8px 0 2px; color: #fff; }
@@ -158,7 +159,7 @@
     }
     .tokushoho-box h3 { color: var(--cyan); margin-bottom: 14px; font-size: 19px; }
     .tokushoho-table { width: 100%; border-collapse: collapse; font-size: 14px; color: #e2e8f0; }
-    .tokushoho-table th, .tokushoho-table td { padding: 9px 10px; border-bottom: 1px solid rgba(148,163,184,0.14); text-align: left; vertical-align: top; }
+    .tokushoho-table th, .tokushoho-table td { padding: 9px 10px; border-bottom: 1px solid rgba(148,163,184,0.14); text-align: start; vertical-align: top; }
     .tokushoho-table th { width: 32%; color: #93c5fd; }
     code { background: #0f172a; color: #fde68a; padding: 2px 7px; border-radius: 6px; font-family: Consolas, monospace; }
     footer {
@@ -172,8 +173,8 @@
   <header>
     <div class="container nav">
       <a class="brand" href="store.html">
-        <img class="brand-logo" src="app_logo_badge.png" alt="SteelCut Pro Logo" />
-        <span>SteelCut Pro — Cắt Thép Tối Ưu</span>
+        <img class="brand-logo" src="app_logo_badge.png" alt="SteelCut Pro" />
+        <span data-i18n="brand_title">SteelCut Pro — Cắt Thép Tối Ưu</span>
       </a>
       <div class="lang-bar" id="langBarWrap">
         <button class="lang-btn active" type="button" onclick="setLang('vi')" id="btn-vi">🇻🇳 Tiếng Việt</button>
@@ -199,7 +200,7 @@
       <div class="pill" data-i18n="hero_pill">✨ DÙNG THỬ MIỄN PHÍ 3 THÁNG (90 NGÀY) · BẢN QUYỀN TRỌN GÓI VĨNH VIỄN</div>
       <h1 data-i18n="hero_title">SteelCut Pro — Phần Mềm Tối Ưu Cắt Thép Kết Cấu &amp; Quản Lý Phôi Dư</h1>
       <p class="lead" data-i18n="hero_lead">
-        Giải pháp tối ưu cắt thép 1D chuẩn công nghiệp (Gilmore-Gomory Exact Column Generation), ghép khớp đầu vát xiên, quản lý tồn kho phôi dư theo vết PA#, xuất bản vẽ cắt xưởng PDF / Excel / AutoCAD DXF và tích hợp sẵn 153 ngôn ngữ offline.
+        Giải pháp tối ưu cắt thép 1D chuẩn công nghiệp, ghép khớp đầu vát xiên, quản lý tồn kho phôi dư theo mã truy vết PA#, xuất bản vẽ cắt xưởng PDF / Excel / AutoCAD DXF và tích hợp sẵn 153 ngôn ngữ ngoại tuyến.
       </p>
       <div class="hero-actions">
         <a class="btn btn-download" href="https://github.com/supporthotro/steelcut-pro/releases/latest" target="_blank" rel="noopener" data-i18n="btn_download">
@@ -210,10 +211,10 @@
         </a>
       </div>
       <div class="kpis">
-        <div class="kpi"><strong data-i18n="kpi_1_v">90 Ngày</strong><span data-i18n="kpi_1">Miễn phí 3 tháng đầu đầy đủ tính năng</span></div>
-        <div class="kpi"><strong data-i18n="kpi_2_v">100% Offline</strong><span data-i18n="kpi_2">Chạy độc lập tại xưởng, bảo mật tuyệt đối dữ liệu dự án</span></div>
-        <div class="kpi"><strong data-i18n="kpi_3_v">153 Ngôn Ngữ</strong><span data-i18n="kpi_3">Giao diện &amp; 153 sách PDF hướng dẫn đi kèm</span></div>
-        <div class="kpi"><strong data-i18n="kpi_4_v">24/7 Auto-Key</strong><span data-i18n="kpi_4">Tự động gửi Key ngay khi nhận thanh toán</span></div>
+        <div class="kpi"><strong data-i18n="kpi_1_v">90 Ngày</strong><span data-i18n="kpi_1">Miễn phí 3 tháng đầu đầy đủ 100% tính năng</span></div>
+        <div class="kpi"><strong data-i18n="kpi_2_v">100% Ngoại Tuyến</strong><span data-i18n="kpi_2">Chạy độc lập tại xưởng, bảo mật tuyệt đối dữ liệu dự án</span></div>
+        <div class="kpi"><strong data-i18n="kpi_3_v">153 Ngôn Ngữ</strong><span data-i18n="kpi_3">Giao diện &amp; 153 sách PDF hướng dẫn sử dụng đi kèm</span></div>
+        <div class="kpi"><strong data-i18n="kpi_4_v">Giao Key 24/7</strong><span data-i18n="kpi_4">Tự động gửi Key qua Email ngay khi nhận thanh toán</span></div>
       </div>
     </section>
 
@@ -233,10 +234,10 @@
           <div class="price">$0 <small>USD</small></div>
           <div class="per-pc" data-i18n="t0_sub">Miễn phí 90 ngày đầu tiên</div>
           <ul>
-            <li data-i18n="t0_f1">Mở khóa 100% tính năng tối ưu &amp; bản vẽ</li>
-            <li data-i18n="t0_f2">Quản lý kho phôi dư &amp; truy vết PA#</li>
-            <li data-i18n="t0_f3">Xuất PDF, Excel (.xlsx) &amp; AutoCAD DXF</li>
-            <li data-i18n="t0_f4">Không xóa dữ liệu dự án khi hết hạn</li>
+            <li data-i18n="t0_f1">Mở khóa 100% tính năng tối ưu &amp; in bản vẽ</li>
+            <li data-i18n="t0_f2">Quản lý kho phôi dư &amp; truy vết lịch sử PA#</li>
+            <li data-i18n="t0_f3">Xuất báo cáo PDF, Excel (.xlsx) &amp; AutoCAD DXF</li>
+            <li data-i18n="t0_f4">Không bao giờ xóa dữ liệu dự án khi hết hạn</li>
           </ul>
           <div class="btn-stack">
             <a class="btn btn-outline" href="https://github.com/supporthotro/steelcut-pro/releases/latest" target="_blank" rel="noopener" data-i18n="t0_btn">⬇ Tải Dùng Thử Ngay</a>
@@ -244,14 +245,14 @@
         </div>
 
         <div class="card">
-          <h3 data-i18n="t1_name">💎 Gói 1 Máy (Single PC)</h3>
+          <h3 data-i18n="t1_name">💎 Gói 1 Máy Tính</h3>
           <div class="price">$700 <small>USD</small></div>
           <div class="per-pc" data-i18n="t1_sub">$700 / máy · Tự động gửi 1 Key</div>
           <ul>
-            <li data-i18n="t1_f1">1 Key bản quyền trọn gói cho 1 máy</li>
-            <li data-i18n="t1_f2">Sử dụng vĩnh viễn 100% ngoại tuyến</li>
-            <li data-i18n="t1_f3">Hỗ trợ gỡ mã chuyển máy khi đổi PC</li>
-            <li data-i18n="t1_f4">Tự động giao Key qua Email 24/7</li>
+            <li data-i18n="t1_f1">1 Key bản quyền trọn gói vĩnh viễn cho 1 máy</li>
+            <li data-i18n="t1_f2">Sử dụng vĩnh viễn 100% ngoại tuyến tại xưởng</li>
+            <li data-i18n="t1_f3">Hỗ trợ gỡ mã chuyển sang máy mới chỉ với 1 nút bấm</li>
+            <li data-i18n="t1_f4">Tự động giao Key qua Email ngay lập tức 24/7</li>
           </ul>
           <div class="btn-stack">
             <a class="btn btn-gumroad" id="gm-link-1" href="https://thienflare.gumroad.com/l/steelcut-pro?option=fCw6Vdn9iIRljYSX9tkKPA%3D%3D&amp;wanted=true" target="_blank" rel="noopener" data-i18n="buy_1">💳 Mua Gói 1 Máy ($700 — Thẻ / PayPal)</a>
@@ -260,14 +261,14 @@
 
         <div class="card highlight">
           <span class="badge" data-i18n="t2_badge">TIẾT KIỆM $400</span>
-          <h3 data-i18n="t2_name">🚀 Gói 2 Máy (Team)</h3>
+          <h3 data-i18n="t2_name">🚀 Gói 2 Máy Tính</h3>
           <div class="price">$1,000 <small>USD</small></div>
           <div class="per-pc" data-i18n="t2_sub">Chỉ $500 / máy · Tự động gửi 2 Key</div>
           <ul>
             <li data-i18n="t2_f1">Cấp 2 Key riêng biệt cho 2 máy tính</li>
-            <li data-i18n="t2_f2">Tiết kiệm ngay $400 USD so với mua lẻ</li>
-            <li data-i18n="t2_f3">Bản quyền trọn gói vĩnh viễn tại xưởng</li>
-            <li data-i18n="t2_f4">Tự động gửi cả 2 Key vào Email 24/7</li>
+            <li data-i18n="t2_f2">Tiết kiệm ngay $400 USD so với mua lẻ từng máy</li>
+            <li data-i18n="t2_f3">Bản quyền trọn gói vĩnh viễn không phí duy trì</li>
+            <li data-i18n="t2_f4">Tự động gửi đủ cả 2 Key vào Email 24/7</li>
           </ul>
           <div class="btn-stack">
             <a class="btn btn-gumroad" id="gm-link-2" href="https://thienflare.gumroad.com/l/steelcut-pro?option=v1FVw2l9tL4jwc0HV5ebQw%3D%3D&amp;wanted=true" target="_blank" rel="noopener" data-i18n="buy_2">💳 Mua Gói 2 Máy ($1,000 — Nhận 2 Key)</a>
@@ -276,12 +277,12 @@
 
         <div class="card highlight">
           <span class="badge" data-i18n="t3_badge">TIẾT KIỆM $900</span>
-          <h3 data-i18n="t3_name">🏭 Gói 3 Máy (Workshop)</h3>
+          <h3 data-i18n="t3_name">🏭 Gói 3 Máy Tính</h3>
           <div class="price">$1,200 <small>USD</small></div>
           <div class="per-pc" data-i18n="t3_sub">Chỉ $400 / máy · Tự động gửi 3 Key</div>
           <ul>
             <li data-i18n="t3_f1">Cấp 3 Key riêng biệt cho 3 máy tính</li>
-            <li data-i18n="t3_f2">Tiết kiệm ngay $900 USD cho phòng kỹ thuật</li>
+            <li data-i18n="t3_f2">Tiết kiệm ngay $900 USD cho phòng kỹ thuật &amp; xưởng</li>
             <li data-i18n="t3_f3">Trọn gói vĩnh viễn · Hỗ trợ kỹ thuật ưu tiên</li>
             <li data-i18n="t3_f4">Tự động gửi đủ 3 Key vào Email 24/7</li>
           </ul>
@@ -294,7 +295,7 @@
           <span class="badge" data-i18n="t4_badge">ƯU ĐÃI 50% — TỪ 4+ MÁY</span>
           <h3 data-i18n="t4_name">👑 Doanh Nghiệp (4+ Máy)</h3>
           <div class="price" id="entTotalDisplay">$1,400 <small>USD</small></div>
-          <div class="per-pc" id="entSubDisplay">$350 / máy · Cấp 4 Key (Tiết kiệm $1,400)</div>
+          <div class="per-pc" id="entSubDisplay"></div>
 
           <div class="qty-control">
             <span style="font-size:13px;color:#cbd5e1;font-weight:700;" data-i18n="qty_label">Số máy:</span>
@@ -306,14 +307,12 @@
           </div>
 
           <ul>
-            <li data-i18n="t4_f1">Đồng giá ưu đãi $350 USD / máy (từ 4 máy)</li>
+            <li data-i18n="t4_f1">Đồng giá ưu đãi $350 USD / máy (từ 4 máy trở lên)</li>
             <li data-i18n="t4_f2">Mỗi máy 1 Key riêng biệt trọn gói vĩnh viễn</li>
-            <li data-i18n="t4_f3">Tự động xuất &amp; gửi đủ N Key qua Email 24/7</li>
+            <li data-i18n="t4_f3">Tự động xuất &amp; gửi đủ số lượng Key qua Email 24/7</li>
           </ul>
           <div class="btn-stack">
-            <a class="btn btn-gumroad-vip" id="entCheckoutBtn" href="https://thienflare.gumroad.com/l/steelcut-pro?option=QLLNpP-XJxEExg5MuL-BEg%3D%3D&amp;wanted=true" target="_blank" rel="noopener">
-              👑 Mua 4 Máy ($1,400 — Tự gửi 4 Key)
-            </a>
+            <a class="btn btn-gumroad-vip" id="entCheckoutBtn" href="https://thienflare.gumroad.com/l/steelcut-pro?option=QLLNpP-XJxEExg5MuL-BEg%3D%3D&amp;wanted=true" target="_blank" rel="noopener"></a>
           </div>
         </div>
       </div>
@@ -324,11 +323,11 @@
       <div class="features-grid">
         <div class="feat">
           <h4 data-i18n="f1_t">📐 Thuật Toán Tối Ưu Đa Phôi Chính Xác</h4>
-          <p data-i18n="f1_d">Kết hợp Gilmore-Gomory Multi-Stock Column Generation + Quy hoạch động Pareto, triệt tiêu phế liệu cắt và ưu tiên giải phóng thép tồn kho thông minh.</p>
+          <p data-i18n="f1_d">Kết hợp thuật toán sinh cột đa phôi Gilmore-Gomory và quy hoạch động Pareto, triệt tiêu phế liệu cắt và ưu tiên giải phóng thép tồn kho thông minh.</p>
         </div>
         <div class="feat">
-          <h4 data-i18n="f2_t">⚡ Ghép Khớp Đầu Vát Xiên &amp; 16 Tiết Diện</h4>
-          <p data-i18n="f2_d">Hỗ trợ đầy đủ H, I, SH, BH, C, L, CT, Hộp, Ống, Thép tấm, Thép thanh... Tự động lật ghép chung đường cắt chéo cho tiết diện đối xứng.</p>
+          <h4 data-i18n="f2_t">⚡ Ghép Khớp Đầu Vát Xiên &amp; 16 Tiết Diện Thép</h4>
+          <p data-i18n="f2_d">Hỗ trợ đầy đủ 16 loại hình thép H, I, SH, BH, C, L, CT, Hộp, Ống, Thép tấm, Thép thanh... Tự động lật ghép chung đường cắt chéo cho tiết diện đối xứng.</p>
         </div>
         <div class="feat">
           <h4 data-i18n="f3_t">📋 Bản Vẽ Xưởng PDF, Excel &amp; Kho Phôi Dư PA#</h4>
@@ -337,35 +336,35 @@
       </div>
 
       <div class="tokushoho-box" id="seller-info">
-        <h3>📧 お問い合わせ・特定商取引法に基づく表記 / Official Seller Information</h3>
+        <h3 data-i18n="seller_box_title">📧 Thông Tin Đơn Vị Phát Hành &amp; Hỗ Trợ Khách Hàng Chính Thức</h3>
         <table class="tokushoho-table">
           <tr>
-            <th>販売事業者・屋号 / Seller</th>
-            <td>SteelCut Pro（<code>support.hotro</code>）</td>
+            <th data-i18n="seller_r1_k">Đơn vị phát hành</th>
+            <td data-i18n="seller_r1_v">SteelCut Pro (support.hotro)</td>
           </tr>
           <tr>
-            <th>運営責任者 / Responsible person</th>
-            <td>請求があった場合には遅滞なく開示いたします / Disclosed without delay upon valid request</td>
+            <th data-i18n="seller_r2_k">Người phụ trách vận hành</th>
+            <td data-i18n="seller_r2_v">Cung cấp đầy đủ không chậm trễ khi có yêu cầu hợp lệ</td>
           </tr>
           <tr>
-            <th>所在地・電話番号 / Address &amp; phone</th>
-            <td>請求があった場合には遅滞なく開示いたします（サポートはメールのみ） / Disclosed upon valid request (email support only)</td>
+            <th data-i18n="seller_r3_k">Địa chỉ &amp; Điện thoại</th>
+            <td data-i18n="seller_r3_v">Cung cấp khi có yêu cầu hợp lệ (hỗ trợ chính thức 24/7 qua Email)</td>
           </tr>
           <tr>
-            <th>お問い合わせ / Support Email</th>
+            <th data-i18n="seller_r4_k">Email hỗ trợ 24/7</th>
             <td><a href="mailto:support.hotro@gmail.com" style="color:#38bdf8;font-weight:700;">support.hotro@gmail.com</a></td>
           </tr>
           <tr>
-            <th>販売価格 / Commercial Pricing</th>
-            <td>Free 90-Day Trial ($0) ／ 1 PC: $700 USD ／ 2 PCs: $1,000 USD ／ 3 PCs: $1,200 USD ／ 4+ PCs: $350 USD per PC (Strict 1 Key per 1 PC · Perpetual)</td>
+            <th data-i18n="seller_r5_k">Bảng giá thương mại</th>
+            <td data-i18n="seller_r5_v">Miễn phí dùng thử 90 ngày ($0) · 1 máy: $700 USD · 2 máy: $1,000 USD · 3 máy: $1,200 USD · Từ 4+ máy: $350 USD/máy (1 Key cho 1 máy · Vĩnh viễn)</td>
           </tr>
           <tr>
-            <th>お支払い方法 / Payment Methods</th>
-            <td>Credit/Debit Card, Apple Pay, Google Pay, PayPal (via Gumroad Secure Checkout)</td>
+            <th data-i18n="seller_r6_k">Phương thức thanh toán</th>
+            <td data-i18n="seller_r6_v">Thẻ Tín Dụng / Ghi Nợ Quốc Tế (Visa, Mastercard, JCB, Amex), Apple Pay, Google Pay, PayPal (qua cổng bảo mật Gumroad)</td>
           </tr>
           <tr>
-            <th>引渡時期 / Key Delivery</th>
-            <td>決済完了後、即時自動送信（24時間365日メールにてライセンスキーを自動発行） / Automatically delivered by email immediately upon payment 24/7</td>
+            <th data-i18n="seller_r7_k">Thời điểm giao Key</th>
+            <td data-i18n="seller_r7_v">Tự động gửi mã bản quyền qua Email ngay lập tức sau khi hoàn tất thanh toán (hoạt động 24/7)</td>
           </tr>
         </table>
       </div>
@@ -374,12 +373,12 @@
 
   <footer>
     <div class="container">
-      <p><strong>SteelCut Pro — Cắt Thép Tối Ưu (v0.8.0)</strong> &middot; Developed by <strong>SteelCut Pro (support.hotro)</strong></p>
+      <p><strong data-i18n="footer_line1">SteelCut Pro — Cắt Thép Tối Ưu (v0.8.0) · Phát hành bởi SteelCut Pro (support.hotro)</strong></p>
       <p style="margin-top:6px;">
-        24/7 Official Customer Support:
+        <span data-i18n="footer_support_lbl">Hỗ trợ khách hàng chính thức 24/7:</span>
         <a href="mailto:support.hotro@gmail.com">support.hotro@gmail.com</a>
         &nbsp;&middot;&nbsp;
-        <a href="./privacy.html">Privacy Policy &amp; License Terms</a>
+        <a id="privacyLinkEl" href="./privacy.html" data-i18n="footer_privacy_link">Chính sách bảo mật &amp; Điều khoản bản quyền</a>
       </p>
     </div>
   </footer>
@@ -393,7 +392,7 @@
       { code: "en", native: "English", label: "English", rtl: false },
       { code: "ja", native: "日本語", label: "日本語", rtl: false }
     ];
-    const I18N = {"vi": {"search_ph": "🔍 Tìm nhanh trong 153 ngôn ngữ...", "all_langs_btn": "🌐 153 Ngôn ngữ", "hero_pill": "✨ DÙNG THỬ MIỄN PHÍ 3 THÁNG (90 NGÀY) · BẢN QUYỀN TRỌN GÓI VĨNH VIỄN", "hero_title": "SteelCut Pro — Phần Mềm Tối Ưu Cắt Thép Kết Cấu & Quản Lý Phôi Dư", "hero_lead": "Giải pháp tối ưu cắt thép 1D chuẩn công nghiệp (Gilmore-Gomory Exact Column Generation), ghép khớp đầu vát xiên, quản lý tồn kho phôi dư theo vết PA#, xuất bản vẽ cắt xưởng PDF / Excel / AutoCAD DXF và tích hợp sẵn 153 ngôn ngữ offline.", "btn_download": "⬇ Tải Bộ Cài Windows 64-bit (Miễn Phí 3 Tháng)", "btn_buy_hero": "🛒 Xem Bảng Giá & Nhận Key Tự Động 24/7", "kpi_1_v": "90 Ngày", "kpi_1": "Miễn phí 3 tháng đầu đầy đủ tính năng", "kpi_2_v": "100% Offline", "kpi_2": "Chạy độc lập tại xưởng, bảo mật tuyệt đối dữ liệu dự án", "kpi_3_v": "153 Ngôn Ngữ", "kpi_3": "Giao diện & 153 sách PDF hướng dẫn đi kèm", "kpi_4_v": "24/7 Auto-Key", "kpi_4": "Tự động gửi Key ngay khi nhận thanh toán", "price_title": "Bảng Giá Bản Quyền Trọn Gói Vĩnh Viễn (Mua 1 Lần)", "price_sub": "Thanh toán an toàn qua Thẻ Quốc Tế, Apple Pay, Google Pay hoặc PayPal (qua cổng bảo mật Gumroad). Hệ thống tự động gửi mã bản quyền vào Email của bạn ngay lập tức 24/7.", "policy_notice": "🔒 Quy tắc cấp phép nghiêm ngặt: 1 Key chỉ sử dụng cho 1 máy tính. Khi mua gói 2, 3 hoặc từ 4+ máy, hệ thống tự động cấp đủ số lượng Key độc lập tương ứng với từng máy!", "t0_name": "🆓 Dùng Thử 3 Tháng", "t0_sub": "Miễn phí 90 ngày đầu tiên", "t0_f1": "Mở khóa 100% tính năng tối ưu & bản vẽ", "t0_f2": "Quản lý kho phôi dư & truy vết PA#", "t0_f3": "Xuất PDF, Excel (.xlsx) & AutoCAD DXF", "t0_f4": "Không xóa dữ liệu dự án khi hết hạn", "t0_btn": "⬇ Tải Dùng Thử Ngay", "t1_name": "💎 Gói 1 Máy (Single PC)", "t1_sub": "$700 / máy · Tự động gửi 1 Key", "t1_f1": "1 Key bản quyền trọn gói cho 1 máy", "t1_f2": "Sử dụng vĩnh viễn 100% ngoại tuyến", "t1_f3": "Hỗ trợ gỡ mã chuyển máy khi đổi PC", "t1_f4": "Tự động giao Key qua Email 24/7", "buy_1": "💳 Mua Gói 1 Máy ($700 — Thẻ / PayPal)", "t2_badge": "TIẾT KIỆM $400", "t2_name": "🚀 Gói 2 Máy (Team)", "t2_sub": "Chỉ $500 / máy · Tự động gửi 2 Key", "t2_f1": "Cấp 2 Key riêng biệt cho 2 máy tính", "t2_f2": "Tiết kiệm ngay $400 USD so với mua lẻ", "t2_f3": "Bản quyền trọn gói vĩnh viễn tại xưởng", "t2_f4": "Tự động gửi cả 2 Key vào Email 24/7", "buy_2": "💳 Mua Gói 2 Máy ($1,000 — Nhận 2 Key)", "t3_badge": "TIẾT KIỆM $900", "t3_name": "🏭 Gói 3 Máy (Workshop)", "t3_sub": "Chỉ $400 / máy · Tự động gửi 3 Key", "t3_f1": "Cấp 3 Key riêng biệt cho 3 máy tính", "t3_f2": "Tiết kiệm ngay $900 USD cho phòng kỹ thuật", "t3_f3": "Trọn gói vĩnh viễn · Hỗ trợ kỹ thuật ưu tiên", "t3_f4": "Tự động gửi đủ 3 Key vào Email 24/7", "buy_3": "💳 Mua Gói 3 Máy ($1,200 — Nhận 3 Key)", "t4_badge": "ƯU ĐÃI 50% — TỪ 4+ MÁY", "t4_name": "👑 Doanh Nghiệp (4+ Máy)", "qty_label": "Số máy:", "t4_f1": "Đồng giá ưu đãi $350 USD / máy (từ 4 máy)", "t4_f2": "Mỗi máy 1 Key riêng biệt trọn gói vĩnh viễn", "t4_f3": "Tự động xuất & gửi đủ N Key qua Email 24/7", "ent_sub_tpl": "$350 / máy · Cấp {n} Key (Tiết kiệm ${saved})", "ent_btn_tpl": "👑 Mua {n} Máy (${total} — Tự gửi {n} Key)", "feat_title": "Tại Sao Kỹ Sư & Nhà Máy Kết Cấu Thép Chọn SteelCut Pro?", "f1_t": "📐 Thuật Toán Tối Ưu Đa Phôi Chính Xác", "f1_d": "Kết hợp Gilmore-Gomory Multi-Stock Column Generation + Quy hoạch động Pareto, triệt tiêu phế liệu cắt và ưu tiên giải phóng thép tồn kho thông minh.", "f2_t": "⚡ Ghép Khớp Đầu Vát Xiên & 16 Tiết Diện", "f2_d": "Hỗ trợ đầy đủ H, I, SH, BH, C, L, CT, Hộp, Ống, Thép tấm, Thép thanh... Tự động lật ghép chung đường cắt chéo cho tiết diện đối xứng.", "f3_t": "📋 Bản Vẽ Xưởng PDF, Excel & Kho Phôi Dư PA#", "f3_d": "In sơ đồ cắt trực quan kèm chú thích 4 cạnh, bảng đặt mua vật tư, tự động nhập kho phôi dư đạt ngưỡng và hoàn tác an toàn có kiểm toán."}, "en": {"search_ph": "🔍 Search 153 languages...", "all_langs_btn": "🌐 153 Languages", "hero_pill": "✨ 3-MONTH (90-DAY) FULL FREE TRIAL · PERPETUAL LIFETIME LICENSE", "hero_title": "SteelCut Pro — Industrial 1D Structural Steel Cutting & Remnant Optimizer", "hero_lead": "Exact multi-stock Gilmore-Gomory Column Generation, complementary bevel nesting, PA# traceable remnant inventory, shop cutting drawings (PDF / XLSX / DXF), and 153 built-in offline UI & manual languages.", "btn_download": "⬇ Download Windows 64-bit Installer (Free 3-Month Trial)", "btn_buy_hero": "🛒 View Volume Pricing & Instant 24/7 Checkout", "kpi_1_v": "90 Days", "kpi_1": "Full-feature 3-month free evaluation", "kpi_2_v": "100% Offline", "kpi_2": "Runs 100% offline in your shop — zero CAD data uploaded", "kpi_3_v": "153 Languages", "kpi_3": "153 UI languages & bundled offline PDF manuals", "kpi_4_v": "24/7 Auto-Key", "kpi_4": "Automatic license key delivery upon payment 24/7", "price_title": "Perpetual Commercial Volume Pricing (One-Time Purchase)", "price_sub": "Pay securely via Credit/Debit Card, Apple Pay, Google Pay, or PayPal (via Gumroad Secure Checkout). Official single-PC license keys are automatically dispatched to your email 24/7.", "policy_notice": "🔒 Strict Licensing Rule: 1 Key is valid for 1 PC only. Multi-PC orders (2, 3, or 4+ PCs) automatically deliver N individual single-PC keys!", "t0_name": "🆓 3-Month Free Trial", "t0_sub": "Free for the first 90 days", "t0_f1": "Unlocks 100% of optimization & drawing features", "t0_f2": "Remnant stock ledger & PA# traceability", "t0_f3": "PDF, Excel (.xlsx) & AutoCAD DXF exports", "t0_f4": "Project data is never deleted upon expiry", "t0_btn": "⬇ Download Free Trial", "t1_name": "💎 1 PC License", "t1_sub": "$700 / PC · Auto-sends 1 Key", "t1_f1": "1 perpetual license key for 1 Windows PC", "t1_f2": "Works 100% offline forever in your workshop", "t1_f3": "1-click license release when moving to a new PC", "t1_f4": "Instant 24/7 automatic email key delivery", "buy_1": "💳 Buy 1 PC ($700 — Card / PayPal)", "t2_badge": "SAVE $400", "t2_name": "🚀 2 PCs Team Pack", "t2_sub": "$500 / PC · Auto-sends 2 Keys", "t2_f1": "2 separate single-PC license keys", "t2_f2": "Save $400 USD vs single-seat price", "t2_f3": "Perpetual offline workshop license", "t2_f4": "Automatically emails both keys 24/7", "buy_2": "💳 Buy 2 PCs ($1,000 — Auto-send 2 Keys)", "t3_badge": "SAVE $900", "t3_name": "🏭 3 PCs Workshop Pack", "t3_sub": "$400 / PC · Auto-sends 3 Keys", "t3_f1": "3 separate single-PC license keys", "t3_f2": "Save $900 USD for engineering & shop teams", "t3_f3": "Perpetual license · Priority technical support", "t3_f4": "Automatically emails all 3 keys 24/7", "buy_3": "💳 Buy 3 PCs ($1,200 — Auto-send 3 Keys)", "t4_badge": "50% OFF — 4+ PCS VOLUME", "t4_name": "👑 Enterprise (4+ PCs)", "qty_label": "PCs:", "t4_f1": "Flat $350 USD / PC volume rate (from 4+ PCs)", "t4_f2": "1 dedicated perpetual key per PC", "t4_f3": "Automatically generates & emails all N keys 24/7", "ent_sub_tpl": "$350 / PC · {n} Individual Keys (Save ${saved})", "ent_btn_tpl": "👑 Buy {n} PCs (${total} — Auto-send {n} Keys)", "feat_title": "Why Structural Steel Engineers & Fabricators Choose SteelCut Pro", "f1_t": "📐 Exact Multi-Stock Cutting Optimization", "f1_d": "Combines Gilmore-Gomory Column Generation with Pareto dynamic programming to minimize scrap and prioritize warehouse stock consumption.", "f2_t": "⚡ Complementary Bevel Nesting & 16 Profiles", "f2_d": "Supports H, I, SH, BH, C, L, CT, RHS, Pipe, Flat Bar, Plate, Rebar... Automatically flips symmetrical sections to share diagonal bevel cuts.", "f3_t": "📋 PDF / XLSX / DXF Shop Drawings & PA# Remnants", "f3_d": "Prints visual bar cutting diagrams with 4-side comments, purchase schedules, automatic remnant registration, and audited 1-key reversal."}, "ja": {"search_ph": "🔍 153言語から検索...", "all_langs_btn": "🌐 153言語切替", "hero_pill": "✨ 初回3ヶ月（90日間）無料試用 · 永久買い切り商用ライセンス", "hero_title": "SteelCut Pro（鋼材取合最適化）— 鋼材切断計画・残材在庫管理ソフト", "hero_lead": "多母材対応 Gilmore-Gomory 列生成アルゴリズム、斜切り交互ネスティング、PA#追跡付き残材管理、工場切断図（PDF / Excel / DXF）、153言語オフライン説明書を標準搭載。", "btn_download": "⬇ Windows 64bit版ダウンロード（3ヶ月間無料試用）", "btn_buy_hero": "🛒 価格表・24時間自動キー発行ストアへ", "kpi_1_v": "90日間無料", "kpi_1": "初回3ヶ月（90日間）全機能を無料で試用可能", "kpi_2_v": "100% オフライン", "kpi_2": "工場内で完全オフライン稼働・図面データの外部送信ゼロ", "kpi_3_v": "153言語対応", "kpi_3": "153言語の画面切替とオフラインPDFマニュアル同梱", "kpi_4_v": "24時間自動発行", "kpi_4": "決済完了後24時間自動でライセンスキーをメール送信", "price_title": "永久買い切りライセンス価格表（月額費用なし）", "price_sub": "クレジットカード・Apple Pay・Google Pay・PayPal（Gumroad安全決済）に対応。決済完了後、自動でライセンスキーがメール送信されます。", "policy_notice": "🔒 ライセンス規定：1つのキーはPC 1台専用です。2台・3台・4台以上のご購入時は、台数分の個別キーが自動発行されます。", "t0_name": "🆓 3ヶ月無料試用版", "t0_sub": "初回90日間 $0 無料", "t0_f1": "最適化計算・切断図出力の全機能を100%利用可能", "t0_f2": "残材在庫台帳・PA#履歴照会に対応", "t0_f3": "PDF・Excel (.xlsx)・AutoCAD DXF 出力対応", "t0_f4": "試用期間終了後も保存済みデータは一切消えません", "t0_btn": "⬇ 無料試用版をダウンロード", "t1_name": "💎 1台ライセンス", "t1_sub": "$700 / 台 · 永久キー1個自動送信", "t1_f1": "PC 1台用の永久買い切りライセンスキー1個", "t1_f2": "認証後は工場内で永久に完全オフライン稼働", "t1_f3": "PC買い替え時のワンクリック認証解除・移行対応", "t1_f4": "決済後24時間メールにて即時自動発行", "buy_1": "💳 1台購入 ($700 — カード / PayPal)", "t2_badge": "$400 お得", "t2_name": "🚀 2台セット", "t2_sub": "$500 / 台 · 個別キー2個自動送信", "t2_f1": "PC 2台分の個別ライセンスキー2個を発行", "t2_f2": "単体購入より $400 USD 割引", "t2_f3": "追加費用なしの永久買い切り商用ライセンス", "t2_f4": "2個のキーを24時間自動でメール送信", "buy_2": "💳 2台購入 ($1,000 — 2キー自動送信)", "t3_badge": "$900 お得", "t3_name": "🏭 3台セット（工場向け）", "t3_sub": "$400 / 台 · 個別キー3個自動送信", "t3_f1": "PC 3台分の個別ライセンスキー3個を発行", "t3_f2": "設計・工場チーム向けに $900 USD 割引", "t3_f3": "永久ライセンス・優先サポート付き", "t3_f4": "3個のキーを24時間自動でメール送信", "buy_3": "💳 3台購入 ($1,200 — 3キー自動送信)", "t4_badge": "50% OFF — 4台以上法人割引", "t4_name": "👑 4台以上まとめ購入", "qty_label": "台数：", "t4_f1": "4台以上は一律 $350 USD / 台（50% OFF）", "t4_f2": "PC 1台ごとに独立した永久キーを発行", "t4_f3": "台数分のキーを24時間メールで自動一括送信", "ent_sub_tpl": "$350 / 台 · 個別キー {n} 個発行 (${saved} お得)", "ent_btn_tpl": "👑 {n}台購入 (${total} — {n}キー自動送信)", "feat_title": "鉄骨ファブリケーター・設計技術者に選ばれる理由", "f1_t": "📐 多母材対応の厳密取合最適化エンジン", "f1_d": "Gilmore-Gomory 列生成法とパレート動的計画法を融合し、端材ロスを最小化しながら在庫母材の優先消化を実現。", "f2_t": "⚡ 斜切り交互ネスティング・全16鋼種対応", "f2_d": "H・I・SH・BH・C・L・CT・角パイプ・鋼管・FB・PL・鉄筋など16断面に対応。対称断面の斜め切断を自動反転ペアリング。", "f3_t": "📋 PDF / Excel / DXF 切断図と PA# 残材管理", "f3_d": "4辺コメント付き切断図・発注集計表の出力、条件を満たす残材の自動入庫、履歴監査付き取消機能を搭載。"}};
+    const I18N = {"vi": {"page_title": "SteelCut Pro — Cắt Thép Tối Ưu | Cửa Hàng Chính Thức & Dùng Thử Miễn Phí 90 Ngày", "brand_title": "SteelCut Pro — Cắt Thép Tối Ưu", "search_ph": "🔍 Tìm nhanh trong 153 ngôn ngữ...", "all_langs_btn": "🌐 153 Ngôn ngữ", "hero_pill": "✨ DÙNG THỬ MIỄN PHÍ 3 THÁNG (90 NGÀY) · BẢN QUYỀN TRỌN GÓI VĨNH VIỄN", "hero_title": "SteelCut Pro — Phần Mềm Tối Ưu Cắt Thép Kết Cấu & Quản Lý Phôi Dư", "hero_lead": "Giải pháp tối ưu cắt thép 1D chuẩn công nghiệp, ghép khớp đầu vát xiên, quản lý tồn kho phôi dư theo mã truy vết PA#, xuất bản vẽ cắt xưởng PDF / Excel / AutoCAD DXF và tích hợp sẵn 153 ngôn ngữ ngoại tuyến.", "btn_download": "⬇ Tải Bộ Cài Windows 64-bit (Miễn Phí 3 Tháng)", "btn_buy_hero": "🛒 Xem Bảng Giá & Nhận Key Tự Động 24/7", "kpi_1_v": "90 Ngày", "kpi_1": "Miễn phí 3 tháng đầu đầy đủ 100% tính năng", "kpi_2_v": "100% Ngoại Tuyến", "kpi_2": "Chạy độc lập tại xưởng, bảo mật tuyệt đối dữ liệu dự án", "kpi_3_v": "153 Ngôn Ngữ", "kpi_3": "Giao diện & 153 sách PDF hướng dẫn sử dụng đi kèm", "kpi_4_v": "Giao Key 24/7", "kpi_4": "Tự động gửi Key qua Email ngay khi nhận thanh toán", "price_title": "Bảng Giá Bản Quyền Trọn Gói Vĩnh Viễn (Mua 1 Lần)", "price_sub": "Thanh toán an toàn qua Thẻ Quốc Tế, Apple Pay, Google Pay hoặc PayPal (qua cổng bảo mật Gumroad). Hệ thống tự động gửi mã bản quyền vào Email của bạn ngay lập tức 24/7.", "policy_notice": "🔒 Quy tắc cấp phép nghiêm ngặt: 1 Key chỉ sử dụng cho 1 máy tính. Khi mua gói 2, 3 hoặc từ 4+ máy, hệ thống tự động cấp đủ số lượng Key độc lập tương ứng với từng máy!", "t0_name": "🆓 Dùng Thử 3 Tháng", "t0_sub": "Miễn phí 90 ngày đầu tiên", "t0_f1": "Mở khóa 100% tính năng tối ưu & in bản vẽ", "t0_f2": "Quản lý kho phôi dư & truy vết lịch sử PA#", "t0_f3": "Xuất báo cáo PDF, Excel (.xlsx) & AutoCAD DXF", "t0_f4": "Không bao giờ xóa dữ liệu dự án khi hết hạn", "t0_btn": "⬇ Tải Dùng Thử Ngay", "t1_name": "💎 Gói 1 Máy Tính", "t1_sub": "$700 / máy · Tự động gửi 1 Key", "t1_f1": "1 Key bản quyền trọn gói vĩnh viễn cho 1 máy", "t1_f2": "Sử dụng vĩnh viễn 100% ngoại tuyến tại xưởng", "t1_f3": "Hỗ trợ gỡ mã chuyển sang máy mới chỉ với 1 nút bấm", "t1_f4": "Tự động giao Key qua Email ngay lập tức 24/7", "buy_1": "💳 Mua Gói 1 Máy ($700 — Thẻ / PayPal)", "t2_badge": "TIẾT KIỆM $400", "t2_name": "🚀 Gói 2 Máy Tính", "t2_sub": "Chỉ $500 / máy · Tự động gửi 2 Key", "t2_f1": "Cấp 2 Key riêng biệt cho 2 máy tính", "t2_f2": "Tiết kiệm ngay $400 USD so với mua lẻ từng máy", "t2_f3": "Bản quyền trọn gói vĩnh viễn không phí duy trì", "t2_f4": "Tự động gửi đủ cả 2 Key vào Email 24/7", "buy_2": "💳 Mua Gói 2 Máy ($1,000 — Nhận 2 Key)", "t3_badge": "TIẾT KIỆM $900", "t3_name": "🏭 Gói 3 Máy Tính", "t3_sub": "Chỉ $400 / máy · Tự động gửi 3 Key", "t3_f1": "Cấp 3 Key riêng biệt cho 3 máy tính", "t3_f2": "Tiết kiệm ngay $900 USD cho phòng kỹ thuật & xưởng", "t3_f3": "Trọn gói vĩnh viễn · Hỗ trợ kỹ thuật ưu tiên", "t3_f4": "Tự động gửi đủ 3 Key vào Email 24/7", "buy_3": "💳 Mua Gói 3 Máy ($1,200 — Nhận 3 Key)", "t4_badge": "ƯU ĐÃI 50% — TỪ 4+ MÁY", "t4_name": "👑 Doanh Nghiệp (4+ Máy)", "qty_label": "Số máy:", "t4_f1": "Đồng giá ưu đãi $350 USD / máy (từ 4 máy trở lên)", "t4_f2": "Mỗi máy 1 Key riêng biệt trọn gói vĩnh viễn", "t4_f3": "Tự động xuất & gửi đủ số lượng Key qua Email 24/7", "ent_sub_tpl": "$350 / máy · Cấp {n} Key (Tiết kiệm ${saved})", "ent_btn_tpl": "👑 Mua {n} Máy (${total} — Tự gửi {n} Key)", "feat_title": "Tại Sao Kỹ Sư & Nhà Máy Kết Cấu Thép Chọn SteelCut Pro?", "f1_t": "📐 Thuật Toán Tối Ưu Đa Phôi Chính Xác", "f1_d": "Kết hợp thuật toán sinh cột đa phôi Gilmore-Gomory và quy hoạch động Pareto, triệt tiêu phế liệu cắt và ưu tiên giải phóng thép tồn kho thông minh.", "f2_t": "⚡ Ghép Khớp Đầu Vát Xiên & 16 Tiết Diện Thép", "f2_d": "Hỗ trợ đầy đủ 16 loại hình thép H, I, SH, BH, C, L, CT, Hộp, Ống, Thép tấm, Thép thanh... Tự động lật ghép chung đường cắt chéo cho tiết diện đối xứng.", "f3_t": "📋 Bản Vẽ Xưởng PDF, Excel & Kho Phôi Dư PA#", "f3_d": "In sơ đồ cắt trực quan kèm chú thích 4 cạnh, bảng đặt mua vật tư, tự động nhập kho phôi dư đạt ngưỡng và hoàn tác an toàn có kiểm toán.", "seller_box_title": "📧 Thông Tin Đơn Vị Phát Hành & Hỗ Trợ Khách Hàng Chính Thức", "seller_r1_k": "Đơn vị phát hành", "seller_r1_v": "SteelCut Pro (support.hotro)", "seller_r2_k": "Người phụ trách vận hành", "seller_r2_v": "Cung cấp đầy đủ không chậm trễ khi có yêu cầu hợp lệ", "seller_r3_k": "Địa chỉ & Điện thoại", "seller_r3_v": "Cung cấp khi có yêu cầu hợp lệ (hỗ trợ chính thức 24/7 qua Email)", "seller_r4_k": "Email hỗ trợ 24/7", "seller_r5_k": "Bảng giá thương mại", "seller_r5_v": "Miễn phí dùng thử 90 ngày ($0) · 1 máy: $700 USD · 2 máy: $1,000 USD · 3 máy: $1,200 USD · Từ 4+ máy: $350 USD/máy (1 Key cho 1 máy · Vĩnh viễn)", "seller_r6_k": "Phương thức thanh toán", "seller_r6_v": "Thẻ Tín Dụng / Ghi Nợ Quốc Tế (Visa, Mastercard, JCB, Amex), Apple Pay, Google Pay, PayPal (qua cổng bảo mật Gumroad)", "seller_r7_k": "Thời điểm giao Key", "seller_r7_v": "Tự động gửi mã bản quyền qua Email ngay lập tức sau khi hoàn tất thanh toán (hoạt động 24/7)", "footer_line1": "SteelCut Pro — Cắt Thép Tối Ưu (v0.8.0) · Phát hành bởi SteelCut Pro (support.hotro)", "footer_support_lbl": "Hỗ trợ khách hàng chính thức 24/7:", "footer_privacy_link": "Chính sách bảo mật & Điều khoản bản quyền", "priv_page_title": "SteelCut Pro — Chính Sách Bảo Mật & Điều Khoản Cấp Phép Thương Mại", "priv_heading": "SteelCut Pro — Chính Sách Bảo Mật & Điều Khoản Bản Quyền", "priv_pub_lbl": "Đơn vị phát hành:", "priv_sup_lbl": "Email hỗ trợ:", "priv_h1": "1. Bảo Mật Dữ Liệu Dự Án Ngoại Tuyến 100%", "priv_p1": "Phần mềm SteelCut Pro xử lý toàn bộ dự án cắt thép kết cấu, bảng bóc tách khối lượng, sổ cái tồn kho phôi dư và bản vẽ xưởng (PDF, XLSX, DXF) hoàn toàn cục bộ 100% trên máy tính Windows của bạn. Không có bất kỳ dữ liệu dự án hay bản vẽ CAD nào bị tải lên máy chủ bên ngoài.", "priv_h2": "2. Dùng Thử Miễn Phí 3 Tháng (90 Ngày) & Quy Tắc 1 Key = 1 Máy", "priv_li1": "Mỗi máy cài đặt mới được tặng 90 ngày (3 tháng) dùng thử miễn phí đầy đủ tính năng, bảo vệ bằng mã băm phần cứng SHA-256 một chiều và mã hóa Windows DPAPI.", "priv_li2": "Quy tắc nghiêm ngặt 1 Key = 1 Máy: Mỗi mã bản quyền thương mại chỉ kích hoạt cho đúng một (01) máy tính Windows. Khi mua gói nhiều máy ($1,000 cho 2 máy, $1,200 cho 3 máy hoặc $350/máy từ 4+ máy), hệ thống tự động gửi đủ số lượng mã Key độc lập tương ứng qua Email.", "priv_li3": "Khi kích hoạt mã trực tuyến (hoặc gỡ mã chuyển sang máy mới), phần mềm chỉ gửi chuỗi mã bản quyền và mã băm thiết bị ẩn danh SHA-256 qua kết nối mã hóa TLS 1.2/1.3 để xác thực hợp lệ.", "priv_li4": "Khi hết hạn dùng thử, phần mềm tuyệt đối không bao giờ xóa hoặc làm thay đổi dữ liệu dự án hay tệp sao lưu của bạn.", "priv_h3": "3. Liên Hệ Hỗ Trợ Khách Hàng Chính Thức 24/7", "priv_p3": "Mọi yêu cầu hỗ trợ kỹ thuật, hóa đơn doanh nghiệp hoặc mua số lượng lớn, vui lòng liên hệ trực tiếp qua Email:", "priv_back_btn": "🛒 Quay Lại Trang Cửa Hàng & Tải Phần Mềm"}, "en": {"page_title": "SteelCut Pro — Structural Steel Cutting Optimizer | Official Storefront & 90-Day Free Trial", "brand_title": "SteelCut Pro — Steel Cutting Optimizer", "search_ph": "🔍 Search across 153 languages...", "all_langs_btn": "🌐 153 Languages", "hero_pill": "✨ 3-MONTH (90-DAY) FULL FREE TRIAL · PERPETUAL LIFETIME LICENSE", "hero_title": "SteelCut Pro — Industrial 1D Structural Steel Cutting & Remnant Optimizer", "hero_lead": "Industrial 1D steel cutting optimization, complementary bevel nesting, PA# traceable remnant inventory, workshop cutting drawings (PDF, Excel, AutoCAD DXF), and 153 built-in offline languages.", "btn_download": "⬇ Download Windows 64-bit Installer (Free 3-Month Trial)", "btn_buy_hero": "🛒 View Volume Pricing & Instant 24/7 Checkout", "kpi_1_v": "90 Days Free", "kpi_1": "Full-feature 3-month free evaluation", "kpi_2_v": "100% Offline", "kpi_2": "Runs completely offline in your workshop — zero CAD data uploaded", "kpi_3_v": "153 Languages", "kpi_3": "153 interface languages & bundled offline PDF user manuals", "kpi_4_v": "24/7 Auto-Key", "kpi_4": "Instant automatic email license key delivery upon payment", "price_title": "Perpetual Commercial Volume Pricing (One-Time Purchase)", "price_sub": "Pay securely via Credit/Debit Card, Apple Pay, Google Pay, or PayPal (via Gumroad Secure Checkout). Official single-PC license keys are automatically dispatched to your email 24/7.", "policy_notice": "🔒 Strict Licensing Rule: 1 Key is valid for 1 PC only. Multi-PC orders (2, 3, or 4+ PCs) automatically deliver the exact corresponding number of individual single-PC keys!", "t0_name": "🆓 3-Month Free Trial", "t0_sub": "Free for the first 90 days", "t0_f1": "Unlocks 100% of optimization & shop drawing features", "t0_f2": "Remnant stock ledger & PA# history traceability", "t0_f3": "Exports to PDF, Excel (.xlsx) & AutoCAD DXF", "t0_f4": "Saved project data is never deleted upon trial expiry", "t0_btn": "⬇ Download Free Trial", "t1_name": "💎 1 PC License", "t1_sub": "$700 / PC · Automatically sends 1 Key", "t1_f1": "1 perpetual license key for 1 Windows PC", "t1_f2": "Works 100% offline forever in your workshop", "t1_f3": "1-click license deactivation when switching to a new PC", "t1_f4": "Instant 24/7 automatic email key delivery", "buy_1": "💳 Buy 1 PC ($700 — Card / PayPal)", "t2_badge": "SAVE $400", "t2_name": "🚀 2 PCs Team Pack", "t2_sub": "$500 / PC · Automatically sends 2 Keys", "t2_f1": "2 separate single-PC license keys", "t2_f2": "Save $400 USD compared to single-PC price", "t2_f3": "Perpetual workshop license with zero subscription fees", "t2_f4": "Automatically emails both keys 24/7", "buy_2": "💳 Buy 2 PCs ($1,000 — Receive 2 Keys)", "t3_badge": "SAVE $900", "t3_name": "🏭 3 PCs Workshop Pack", "t3_sub": "$400 / PC · Automatically sends 3 Keys", "t3_f1": "3 separate single-PC license keys", "t3_f2": "Save $900 USD for engineering & fabrication teams", "t3_f3": "Perpetual license · Priority technical support", "t3_f4": "Automatically emails all 3 keys 24/7", "buy_3": "💳 Buy 3 PCs ($1,200 — Receive 3 Keys)", "t4_badge": "50% OFF — 4+ PCS VOLUME", "t4_name": "👑 Enterprise (4+ PCs)", "qty_label": "PCs:", "t4_f1": "Flat $350 USD / PC volume discount (from 4+ PCs)", "t4_f2": "1 dedicated perpetual license key per PC", "t4_f3": "Automatically generates & emails all keys 24/7", "ent_sub_tpl": "$350 / PC · {n} Individual Keys (Save ${saved})", "ent_btn_tpl": "👑 Buy {n} PCs (${total} — Auto-send {n} Keys)", "feat_title": "Why Structural Steel Engineers & Fabricators Choose SteelCut Pro", "f1_t": "📐 Exact Multi-Stock Cutting Optimization", "f1_d": "Combines multi-stock Gilmore-Gomory column generation with Pareto dynamic programming to eliminate scrap and prioritize existing warehouse stock.", "f2_t": "⚡ Complementary Bevel Nesting & 16 Steel Profiles", "f2_d": "Supports all 16 structural profiles including H, I, SH, BH, Channel, Angle, Tee, Box, Pipe, Flat Bar, Plate, and Rebar with automatic bevel pairing.", "f3_t": "📋 PDF, Excel & DXF Shop Drawings + PA# Remnant Stock", "f3_d": "Prints visual cutting diagrams with 4-edge comments, purchase schedules, automatic eligible remnant registration, and audited reversal.", "seller_box_title": "📧 Official Publisher & Customer Support Information", "seller_r1_k": "Publisher / Seller", "seller_r1_v": "SteelCut Pro (support.hotro)", "seller_r2_k": "Operations Representative", "seller_r2_v": "Disclosed without delay upon valid customer request", "seller_r3_k": "Address & Telephone", "seller_r3_v": "Disclosed upon valid request (24/7 official customer support via email)", "seller_r4_k": "24/7 Support Email", "seller_r5_k": "Commercial Pricing", "seller_r5_v": "Free 90-Day Trial ($0) · 1 PC: $700 USD · 2 PCs: $1,000 USD · 3 PCs: $1,200 USD · 4+ PCs: $350 USD/PC (Strict 1 Key per 1 PC · Perpetual)", "seller_r6_k": "Payment Methods", "seller_r6_v": "International Credit/Debit Card (Visa, Mastercard, JCB, Amex), Apple Pay, Google Pay, PayPal (via Gumroad Secure Checkout)", "seller_r7_k": "License Key Delivery", "seller_r7_v": "Automatically delivered by email immediately upon payment completion (24/7)", "footer_line1": "SteelCut Pro — Steel Cutting Optimizer (v0.8.0) · Published by SteelCut Pro (support.hotro)", "footer_support_lbl": "24/7 Official Customer Support:", "footer_privacy_link": "Privacy Policy & License Terms", "priv_page_title": "SteelCut Pro — Privacy Policy & Commercial License Terms", "priv_heading": "SteelCut Pro — Privacy Policy & Commercial Licensing", "priv_pub_lbl": "Publisher:", "priv_sup_lbl": "Support Contact:", "priv_h1": "1. 100% Local Offline Project Data Privacy", "priv_p1": "SteelCut Pro processes all structural steel cutting projects, material takeoffs, remnant inventory ledgers, and shop drawings (PDF, XLSX, DXF) 100% locally on your Windows computer. Zero project databases or CAD drawings are ever uploaded to external servers.", "priv_h2": "2. 3-Month (90-Day) Free Trial & Strict 1-Key-1-PC Policy", "priv_li1": "Every new installation includes a 90-day (3-month) full-feature free evaluation anchored locally using a privacy-preserving SHA-256 hardware hash and Windows DPAPI encryption.", "priv_li2": "Strict 1 Key = 1 PC Policy: Each commercial license key activates strictly one (1) Windows computer. Multi-PC purchases ($1,000 for 2 PCs, $1,200 for 3 PCs, or $350/PC for 4+ PCs) automatically deliver the corresponding number of individual single-PC license keys via email.", "priv_li3": "When activating an online license key (or releasing a key to move to a new PC), only the license key string and non-reversible SHA-256 device hash are sent over TLS 1.2/1.3 solely for license verification.", "priv_li4": "Trial or license expiration never deletes or alters your saved project databases or backups.", "priv_h3": "3. Official 24/7 Customer Support", "priv_p3": "For commercial licensing, corporate invoices, volume quotes, or technical support, contact us via email:", "priv_back_btn": "🛒 Back to Official Storefront & Download Page"}, "ja": {"page_title": "SteelCut Pro — 鋼材取合最適化 | 公式ストア・90日間無料試用", "brand_title": "SteelCut Pro — 鋼材取合最適化", "search_ph": "🔍 153言語から検索...", "all_langs_btn": "🌐 153言語切替", "hero_pill": "✨ 初回3ヶ月（90日間）無料試用 · 永久買い切り商用ライセンス", "hero_title": "SteelCut Pro（鋼材取合最適化）— 鋼材切断計画・残材在庫管理ソフト", "hero_lead": "多母材対応 Gilmore-Gomory 列生成アルゴリズム、斜切り交互ネスティング、PA#追跡付き残材在庫管理、工場切断図出力（PDF / Excel / AutoCAD DXF）、153言語オフライン説明書を標準搭載。", "btn_download": "⬇ Windows 64bit版ダウンロード（3ヶ月間無料試用）", "btn_buy_hero": "🛒 価格表・24時間自動キー発行ストアへ", "kpi_1_v": "90日間無料", "kpi_1": "初回3ヶ月（90日間）全機能を100%無料で試用可能", "kpi_2_v": "完全オフライン", "kpi_2": "工場内で完全オフライン稼働・図面データの外部送信ゼロ", "kpi_3_v": "153言語対応", "kpi_3": "153言語の画面切替とオフラインPDF取扱説明書を同梱", "kpi_4_v": "24時間自動発行", "kpi_4": "決済完了後24時間自動でライセンスキーをメール送信", "price_title": "永久買い切りライセンス価格表（月額費用なし）", "price_sub": "クレジットカード・Apple Pay・Google Pay・PayPal（Gumroad安全決済）に対応。決済完了後、24時間自動でライセンスキーがメール送信されます。", "policy_notice": "🔒 ライセンス規定：1つのキーはPC 1台専用です。2台・3台・4台以上のご購入時は、台数分の個別キーが自動発行されます。", "t0_name": "🆓 3ヶ月無料試用版", "t0_sub": "初回90日間 $0 無料", "t0_f1": "最適化計算・切断図出力の全機能を100%利用可能", "t0_f2": "残材在庫台帳・PA#履歴照会に対応", "t0_f3": "PDF・Excel (.xlsx)・AutoCAD DXF 出力対応", "t0_f4": "試用期間終了後も保存済みデータは一切消去されません", "t0_btn": "⬇ 無料試用版をダウンロード", "t1_name": "💎 1台ライセンス", "t1_sub": "$700 / 台 · 永久キー1個自動送信", "t1_f1": "Windows PC 1台用の永久買い切りキー1個", "t1_f2": "認証後は工場内で永久に完全オフライン稼働", "t1_f3": "PC買い替え時のワンクリック認証解除・移行対応", "t1_f4": "決済後24時間メールにて即時自動発行", "buy_1": "💳 1台購入 ($700 — カード / PayPal)", "t2_badge": "$400 お得", "t2_name": "🚀 2台セット", "t2_sub": "$500 / 台 · 個別キー2個自動送信", "t2_f1": "PC 2台分の個別ライセンスキー2個を発行", "t2_f2": "単体購入より $400 USD 割引", "t2_f3": "維持費ゼロの永久買い切り商用ライセンス", "t2_f4": "2個のキーを24時間自動でメール送信", "buy_2": "💳 2台購入 ($1,000 — 2キー自動送信)", "t3_badge": "$900 お得", "t3_name": "🏭 3台セット（工場向け）", "t3_sub": "$400 / 台 · 個別キー3個自動送信", "t3_f1": "PC 3台分の個別ライセンスキー3個を発行", "t3_f2": "設計・工場チーム向けに $900 USD 割引", "t3_f3": "永久ライセンス・優先技術サポート付き", "t3_f4": "3個のキーを24時間自動でメール送信", "buy_3": "💳 3台購入 ($1,200 — 3キー自動送信)", "t4_badge": "50% OFF — 4台以上法人割引", "t4_name": "👑 4台以上まとめ購入", "qty_label": "台数：", "t4_f1": "4台以上は一律 $350 USD / 台（50% OFF）", "t4_f2": "PC 1台ごとに独立した永久キーを発行", "t4_f3": "台数分のキーを24時間メールで自動一括送信", "ent_sub_tpl": "$350 / 台 · 個別キー {n} 個発行 (${saved} お得)", "ent_btn_tpl": "👑 {n}台購入 (${total} — {n}キー自動送信)", "feat_title": "鉄骨ファブリケーター・設計技術者に選ばれる理由", "f1_t": "📐 多母材対応の厳密取合最適化エンジン", "f1_d": "Gilmore-Gomory 列生成法とパレート動的計画法を融合し、端材ロスを最小化しながら在庫母材の優先消化を実現。", "f2_t": "⚡ 斜切り交互ネスティング・全16鋼種対応", "f2_d": "H・I・SH・BH・C・L・CT・角パイプ・鋼管・FB・PL・鉄筋など16断面に対応。対称断面の斜め切断を自動反転ペアリング。", "f3_t": "📋 PDF / Excel / DXF 切断図と PA# 残材管理", "f3_d": "4辺コメント付き切断図・発注集計表の出力、条件を満たす残材の自動入庫、履歴監査付き取消機能を搭載。", "seller_box_title": "📧 お問い合わせ・特定商取引法に基づく表記", "seller_r1_k": "販売事業者・屋号", "seller_r1_v": "SteelCut Pro（support.hotro）", "seller_r2_k": "運営責任者", "seller_r2_v": "請求があった場合には遅滞なく開示いたします", "seller_r3_k": "所在地・電話番号", "seller_r3_v": "請求があった場合には遅滞なく開示いたします（サポートはメールにて24時間対応）", "seller_r4_k": "24時間サポートメール", "seller_r5_k": "販売価格", "seller_r5_v": "90日間無料試用（$0）・1台：$700 USD・2台：$1,000 USD・3台：$1,200 USD・4台以上：$350 USD/台（1キーにつきPC 1台・永久ライセンス）", "seller_r6_k": "お支払い方法", "seller_r6_v": "国際クレジットカード（Visa / Mastercard / JCB / Amex）、Apple Pay、Google Pay、PayPal（Gumroad安全決済）", "seller_r7_k": "引渡時期", "seller_r7_v": "決済完了後、即時自動送信（24時間365日メールにてライセンスキーを自動発行）", "footer_line1": "SteelCut Pro — 鋼材取合最適化 (v0.8.0) · 発行元：SteelCut Pro (support.hotro)", "footer_support_lbl": "24時間公式カスタマーサポート：", "footer_privacy_link": "プライバシーポリシー・ライセンス規約", "priv_page_title": "SteelCut Pro — プライバシーポリシー・商用ライセンス規約", "priv_heading": "SteelCut Pro — プライバシーポリシーおよびライセンス規約", "priv_pub_lbl": "発行元：", "priv_sup_lbl": "サポート窓口：", "priv_h1": "1. 完全ローカル処理による設計データの保護", "priv_p1": "SteelCut Pro は、鋼材切断プロジェクト、部材集計、残材在庫台帳、および工場切断図（PDF / XLSX / DXF）のすべてをお客様の Windows PC 内で100%ローカル処理します。プロジェクトデータベースやCAD図面が外部サーバーへ送信されることは一切ありません。", "priv_h2": "2. 3ヶ月（90日間）無料試用と「1キー＝PC 1台」規定", "priv_li1": "新規インストール時は全機能を利用できる90日間（3ヶ月）の無料試用期間が付与され、非可逆SHA-256ハードウェア識別とWindows DPAPI暗号化で保護されます。", "priv_li2": "厳格な「1キー＝PC 1台」規定：各商用ライセンスキーは Windows PC 1台のみ認証可能です。複数台購入（2台 $1,000、3台 $1,200、4台以上 $350/台）では、台数分の個別ライセンスキーがメールで自動送信されます。", "priv_li3": "オンライン認証およびPC移行時の認証解除では、ライセンスキー文字列と非可逆SHA-256デバイスハッシュのみがTLS 1.2/1.3暗号化通信で送信されます。", "priv_li4": "試用期間またはライセンス期限が終了しても、保存済みのプロジェクトデータやバックアップが削除・変更されることはありません。", "priv_h3": "3. 24時間公式カスタマーサポート", "priv_p3": "商用ライセンス、法人請求書、大口見積もり、技術サポートについてはメールにてお問い合わせください：", "priv_back_btn": "🛒 公式ストア・ダウンロードページへ戻る"}};
 
     function toggleLangMenu(ev) {
       if (ev) ev.stopPropagation();
@@ -463,7 +462,8 @@
       const isExtra = !["vi", "en", "ja"].includes(currentLang);
       if (moreBtn) moreBtn.classList.toggle("active", isExtra);
 
-      const dict = I18N[currentLang] || I18N.en;
+      const dict = I18N[currentLang] || I18N.vi;
+      if (dict.page_title) document.title = dict.page_title;
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const k = el.getAttribute("data-i18n");
         if (dict[k]) el.textContent = dict[k];
@@ -473,6 +473,8 @@
       }
       const searchInp = document.getElementById("langSearchInput");
       if (searchInp && dict.search_ph) searchInp.placeholder = dict.search_ph;
+      const privLink = document.getElementById("privacyLinkEl");
+      if (privLink) privLink.href = "./privacy.html?lang=" + encodeURIComponent(currentLang);
 
       try { localStorage.setItem("steelcut_store_lang", currentLang); } catch (e) {}
       updateEntCalc();
@@ -520,7 +522,6 @@
       btnEl.textContent = fmt(dict.ent_btn_tpl || I18N.vi.ent_btn_tpl);
     }
 
-    // Load full 153-language pack & initialize language
     fetch("./store-i18n-153.json")
       .then((r) => (r.ok ? r.json() : null))
       .then((bundle) => {
@@ -560,7 +561,7 @@
       })
       .catch(() => {});
 
-    updateEntCalc();
+    setLang("vi");
   </script>
 </body>
 </html>
